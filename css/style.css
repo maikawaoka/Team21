@@ -1,0 +1,77 @@
+/******************************************************************************
+  slider
+*******************************************************************************/
+.slider {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.slick-slide {
+margin: 0px 20px;
+transform: scale(.8);
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: black;
+}
+
+
+.slick-slide {
+transition: all ease-in-out .3s;
+opacity: .2;
+}
+
+.slick-active {
+opacity: .5;
+}
+
+.slick-current {
+opacity: 1;
+transform: scale(1);
+}
+
+/******************************************************************************
+  common
+*******************************************************************************/
+.d-flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.pointer-cursor {
+  cursor: pointer !important;
+}
+
+.o-80 {
+  opacity: 0.8 !important;
+}
+
+.person {
+  position: relative;
+}
+
+.person .active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s; 
+}
+
+.person img:last-child:hover {
+  opacity: 0;
+}
+
+.person:hover .active {
+  opacity: 1;
+}
