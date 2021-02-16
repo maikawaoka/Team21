@@ -137,6 +137,7 @@ transform: scale(1);
 
 .list-area dt{
   float: left;
+  width: 12vw;
 }
 
 .list-area dt::after{
@@ -144,7 +145,7 @@ transform: scale(1);
 }
 
 .list-area dd{
-  margin-left: 11vw;
+  margin-left: 12vw;
 }
 
 .person-contents{
