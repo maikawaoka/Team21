@@ -60,11 +60,34 @@ $(function() {
     });
   });
 
-  $(".center").slick({
+  var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 3
+  });
+
+  $('#nav-member-tab').click(function () {
+    memberSlider.css('opacity',0);
+    memberSlider.animate({'z-index':1},300,function(){
+      memberSlider.slick('setPosition');
+      memberSlider.animate({'opacity':1});
+    });
+  });
+
+  var teamSlider = $(".team.center").slick({
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  $('#nav-team-tab').click(function () {
+    teamSlider.css('opacity',0);
+    teamSlider.animate({'z-index':1},300,function(){
+      teamSlider.slick('setPosition');
+      teamSlider.animate({'opacity':1});
+    });
   });
 
   var hash = location.hash.slice(1);
