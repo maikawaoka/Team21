@@ -107,7 +107,7 @@ transform: scale(1);
 
 .person-name h1{
   font-size: 1.3vw;
-  font-weight: normal;
+  font-weight: large;
   text-align: center;
   margin-bottom: 0vw;
 }
