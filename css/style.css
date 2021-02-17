@@ -81,7 +81,6 @@ transform: scale(1);
 *******************************************************************************/
 .member-detail{
   width: 44vw;
-  min-width: 550px;
   margin: auto;
 }
 
@@ -95,9 +94,12 @@ transform: scale(1);
   margin-right: 3vw;
 }
 
+.mv-img img{
+  width: 14vw;
+}
+
 .mv-text{
   font-size: 1.3vw;
-
 }
 
 .person-name{
@@ -160,13 +162,17 @@ transform: scale(1);
   justify-content: center;
   align-items: center;
   display: flex;
-  width: auto;
-  border: solid;
+}
+
+.content-title img{
+  width: 5vw;
 }
 
 .content-title h2{
   font-size: 1.4vw;
   margin-left: 1vw;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .title-color{
@@ -183,4 +189,26 @@ transform: scale(1);
   font-size: 1.2vw;
   line-height: 1.8;
   margin-top: 2.4vw;
+}
+
+@media screen and (max-width:700px){
+  .member-detail{
+    width: 80vw;
+  }
+  
+  .person-mv{
+    justify-content: center;
+  }
+
+  .mv-text{
+    width: 45vw;
+  }
+
+  .list-area dt{
+    width: 90px;
+  }
+
+  .list-area dd{
+    margin-left: 90px;
+  }
 }
