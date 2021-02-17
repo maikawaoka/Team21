@@ -160,6 +160,8 @@ transform: scale(1);
   justify-content: center;
   align-items: center;
   display: flex;
+  width: auto;
+  border: solid;
 }
 
 .content-title h2{
