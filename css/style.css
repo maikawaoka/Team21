@@ -60,6 +60,10 @@ transform: scale(1);
   z-index: 1000 !important;
 }
 
+.w-95 {
+  width: 95% !important;
+}
+
 .person {
   position: relative;
 }
@@ -78,4 +82,8 @@ transform: scale(1);
 
 .person:hover .active {
   opacity: 1;
+}
+
+.person img {
+  width: 100%;
 }
