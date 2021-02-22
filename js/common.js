@@ -1,4 +1,6 @@
 $(function() {
+  resizeAddClass();
+
   var rule = {
     birthplace: [],
     bunri: "",
@@ -60,18 +62,71 @@ $(function() {
     });
   });
 
-  $(".center").slick({
+  var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 768,  //ブレイクポイントを指定
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
   });
 
+  $('#nav-member-tab').click(function () {
+    memberSlider.css('opacity',0);
+    memberSlider.animate({'z-index':1},300,function(){
+      memberSlider.slick('setPosition');
+      memberSlider.animate({'opacity':1});
+    });
+  });
+
+  var teamSlider = $(".team.center").slick({
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  $('#nav-team-tab').click(function () {
+    teamSlider.css('opacity',0);
+    teamSlider.animate({'z-index':1},300,function(){
+      teamSlider.slick('setPosition');
+      teamSlider.animate({'opacity':1});
+    });
+  });
+
+  // 選択されたタブのハッシュ
   var hash = location.hash.slice(1);
-  if (hash === 'team') {
-    $('#nav-member-tab, #nav-data-tab').removeClass('active');
-    $('#nav-member, #nav-data').removeClass('show active');
-    $(`#nav-${hash}-tab`).addClass('active');
-    $(`#nav-${hash}`).addClass('show active');
-  }
+  // タブのリスト
+  var tabNames = ['member', 'team', 'data'];
+  // 選択されなかったタブのリスト
+  var notSelectedTabNames = tabNames.filter(tab => tab !== hash);
+  // 選択されなかったタブのactiveクラスとshowクラスを取り除く
+  notSelectedTabNames.forEach(tab => {
+    $(`#nav-${tab}-tab`).removeClass('active');
+    $(`#nav-${tab}`).removeClass('show active');
+  });
+  // 選択されたタブにactiveクラスとshowクラスを付与する
+  $(`#nav-${hash}-tab`).addClass('active');
+  $(`#nav-${hash}`).addClass('show active');
 });
+
+$(window).resize(function(){
+  resizeAddClass();
+});
+
+function resizeAddClass() {
+  //windowの幅をxに代入
+  var x = $(window).width();
+  //windowの分岐幅をyに代入
+  var y = 768;
+  if (x <= y) {
+    $('#member-list').addClass('row-cols-3').removeClass('row-cols-4');
+  }else{
+    $('#member-list').addClass('row-cols-4').removeClass('row-cols-3');
+  }
+}
