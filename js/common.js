@@ -99,20 +99,22 @@ $(function() {
     });
   });
 
-  // 選択されたタブのハッシュ
-  var hash = location.hash.slice(1);
-  // タブのリスト
-  var tabNames = ['member', 'team', 'data'];
-  // 選択されなかったタブのリスト
-  var notSelectedTabNames = tabNames.filter(tab => tab !== hash);
-  // 選択されなかったタブのactiveクラスとshowクラスを取り除く
-  notSelectedTabNames.forEach(tab => {
-    $(`#nav-${tab}-tab`).removeClass('active');
-    $(`#nav-${tab}`).removeClass('show active');
-  });
-  // 選択されたタブにactiveクラスとshowクラスを付与する
-  $(`#nav-${hash}-tab`).addClass('active');
-  $(`#nav-${hash}`).addClass('show active');
+  $('.nav-tabs > li').on('click', function() {
+    // 選択されたタブのハッシュ
+    var hash = location.hash.slice(1);
+    // タブのリスト
+    var tabNames = ['member', 'team', 'data'];
+    // 選択されなかったタブのリスト
+    var notSelectedTabNames = tabNames.filter(tab => tab !== hash);
+    // 選択されなかったタブのactiveクラスとshowクラスを取り除く
+    notSelectedTabNames.forEach(tab => {
+      $(`#nav-${tab}-tab`).removeClass('active');
+      $(`#nav-${tab}`).removeClass('show active');
+    });
+    // 選択されたタブにactiveクラスとshowクラスを付与する
+    $(`#nav-${hash}-tab`).addClass('active');
+    $(`#nav-${hash}`).addClass('show active');
+  })
 });
 
 $(window).resize(function(){
@@ -125,8 +127,8 @@ function resizeAddClass() {
   //windowの分岐幅をyに代入
   var y = 768;
   if (x <= y) {
-    $('#member-list').addClass('row-cols-3').removeClass('row-cols-4');
-  }else{
-    $('#member-list').addClass('row-cols-4').removeClass('row-cols-3');
+    $('#member-list').addClass('row-cols-3 w-95').removeClass('row-cols-4 w-75');
+  }else {
+    $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
   }
 }
