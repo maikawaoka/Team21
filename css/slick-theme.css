@@ -88,8 +88,7 @@
 }
 .slick-prev:before
 {
-    /* NOTE: 前に戻るボタン */
-    content: url(../image/arrow-up.png);
+    content: url(../image/prev.png);
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -107,8 +106,7 @@
 }
 .slick-next:before
 {
-    /* NOTE: 次に進むボタン */
-    content: url(../image/arrow-up.png);
+    content: url(../image/next.png);
 }
 [dir='rtl'] .slick-next:before
 {

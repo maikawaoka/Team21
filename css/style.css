@@ -1,3 +1,5 @@
+/* NOTE:全体のcolor#393939にしたい */
+/* TODO:画像ヘッダーの入れ替え画質 */
 /******************************************************************************
   slider
 *******************************************************************************/
@@ -17,7 +19,7 @@ width: 100%;
 
 .slick-prev:before,
 .slick-next:before {
-color: black;
+color: #393939;
 }
 
 
@@ -84,6 +86,220 @@ transform: scale(1);
   opacity: 1;
 }
 
+/******************************************************************************
+  member detail
+*******************************************************************************/
+.member-detail{
+  width: 44vw;
+  margin: auto;
+}
+
+.person-mv{
+  display: flex;
+}
+
+.mv-img{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 3vw;
+}
+
+.mv-img img{
+  width: 14vw;
+}
+
+.mv-text{
+  font-size: 1.3vw;
+}
+
+.person-name{
+  display: inline-block;
+  margin-bottom: 3vw;
+}
+
+.person-name h1{
+  font-size: 1.3vw;
+  font-weight: large;
+  text-align: center;
+  margin-bottom: 0vw;
+}
+
+.name-en{
+  font-size: 3.4vw;
+  font-weight: bold;
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+  line-height: 1.1;
+  color: #158bde;
+  margin-bottom: 0vw;
+}
+
+.name-en::after{
+  content: '';
+  display: block;
+  background: #158bde;
+  height: 0.6vw;
+  margin: 0.3vw;
+  border-radius: 10vw;
+}
+
+.list-area dl{
+  margin: 0;
+  line-height: 1.6;
+}
+
+.list-area dt{
+  float: left;
+  font-weight: 500;
+}
+
+.list-area dt::after{
+  content: ":";
+}
+
+.list-area dd{
+  margin-left: 13vw;
+}
+
+.person-contents{
+  margin-top: 4vw;
+}
+
+.detail-content{
+  margin-bottom: 10vw;
+}
+
+.content-title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.content-title img{
+  width: 5vw;
+}
+
+.content-title h2{
+  font-size: 1.4vw;
+  margin-left: 1vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.title-color{
+  color: #52C18B;
+}
+
+.detail-content h3{
+  font-size: 1.6vw;
+  text-align: center;
+  margin-top: 3vw;
+}
+
+.detail-content p{
+  font-size: 1.2vw;
+  line-height: 1.8;
+  margin-top: 2.4vw;
+}
+
 .person img {
   width: 100%;
+}
+
+@media screen and (max-width:599px){
+  .member-detail{
+    width: 90vw;
+  }
+
+  .mv-img img{
+    width: 30vw;
+  }
+  
+  .mv-text{
+    font-size: 2.7vw;
+  }
+
+  .person-name h1{
+    font-size: 2.7vw;
+  }
+
+  .name-en{
+    font-size: 7vw;
+  }
+
+  .name-en::after{
+    height: 1vw;
+  }
+
+  .list-area dd{
+    margin-left: 24.5vw;
+  }
+
+  .content-title img{
+    width: 10vw;
+  }
+  
+  .content-title h2{
+    font-size: 3.2vw;
+  }
+
+  .detail-content h3{
+    font-size: 3.6vw;
+    margin-top: 3vw;
+  }
+
+  .detail-content p{
+    font-size: 2.5vw;
+    margin-top: 5.5vw;
+  }
+
+
+}
+
+@media screen and (min-width:600px) and (max-width:1024px){
+  .member-detail{
+    width: 65vw;
+  }
+
+  .mv-img{
+    margin-right: 5vw;
+  }
+
+  .mv-img img{
+    width: 21vw;
+  }
+  
+  .mv-text{
+    font-size: 1.9vw;
+  }
+
+  .person-name h1{
+    font-size: 1.9vw;
+  }
+
+  .name-en{
+    font-size: 5vw;
+  }
+
+  .list-area dd{
+    margin-left: 18vw;
+  }
+
+  .content-title img{
+    width: 7.5vw;
+  }
+  
+  .content-title h2{
+    font-size: 2.1vw;
+  }
+
+  .detail-content h3{
+    font-size: 2.4vw;
+    margin-top: 3vw;
+  }
+
+  .detail-content p{
+    font-size: 1.8vw;
+    margin-top: 5.5vw;
+  }
+
 }
