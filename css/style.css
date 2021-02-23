@@ -91,7 +91,6 @@ transform: scale(1);
 *******************************************************************************/
 .member-detail{
   width: 44vw;
-  min-width: 550px;
   margin: auto;
 }
 
@@ -105,9 +104,12 @@ transform: scale(1);
   margin-right: 3vw;
 }
 
+.mv-img img{
+  width: 14vw;
+}
+
 .mv-text{
   font-size: 1.3vw;
-
 }
 
 .person-name{
@@ -172,9 +174,15 @@ transform: scale(1);
   display: flex;
 }
 
+.content-title img{
+  width: 5vw;
+}
+
 .content-title h2{
   font-size: 1.4vw;
   margin-left: 1vw;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .title-color{
@@ -195,4 +203,103 @@ transform: scale(1);
 
 .person img {
   width: 100%;
+}
+
+@media screen and (max-width:599px){
+  .member-detail{
+    width: 90vw;
+  }
+
+  .mv-img img{
+    width: 30vw;
+  }
+  
+  .mv-text{
+    font-size: 2.7vw;
+  }
+
+  .person-name h1{
+    font-size: 2.7vw;
+  }
+
+  .name-en{
+    font-size: 7vw;
+  }
+
+  .name-en::after{
+    height: 1vw;
+  }
+
+  .list-area dd{
+    margin-left: 24.5vw;
+  }
+
+  .content-title img{
+    width: 10vw;
+  }
+  
+  .content-title h2{
+    font-size: 3.2vw;
+  }
+
+  .detail-content h3{
+    font-size: 3.6vw;
+    margin-top: 3vw;
+  }
+
+  .detail-content p{
+    font-size: 2.5vw;
+    margin-top: 5.5vw;
+  }
+
+
+}
+
+@media screen and (min-width:600px) and (max-width:1024px){
+  .member-detail{
+    width: 65vw;
+  }
+
+  .mv-img{
+    margin-right: 5vw;
+  }
+
+  .mv-img img{
+    width: 21vw;
+  }
+  
+  .mv-text{
+    font-size: 1.9vw;
+  }
+
+  .person-name h1{
+    font-size: 1.9vw;
+  }
+
+  .name-en{
+    font-size: 5vw;
+  }
+
+  .list-area dd{
+    margin-left: 18vw;
+  }
+
+  .content-title img{
+    width: 7.5vw;
+  }
+  
+  .content-title h2{
+    font-size: 2.1vw;
+  }
+
+  .detail-content h3{
+    font-size: 2.4vw;
+    margin-top: 3vw;
+  }
+
+  .detail-content p{
+    font-size: 1.8vw;
+    margin-top: 5.5vw;
+  }
+
 }
