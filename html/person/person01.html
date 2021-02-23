@@ -15,15 +15,37 @@
     <title>内定者紹介サイト ｜ シアトルコンサルティング株式会社</title>
   </head>
   <body>
-    <nav class="bg-light w-100 position-fixed o-80">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 w-100 position-fixed o-80 z-1000">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tabs" aria-controls="nav-tabs">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-tabs">
+          <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item" role="presentation">
+              <a href="../index.html#member" class="nav-link py-4 text-dark" id="nav-member-tab">メンバー紹介</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a href="../index.html#team" class="nav-link py-4" id="nav-team-tab">チーム紹介</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a href="../index.html#data" class="nav-link py-4" id="nav-data-tab">21データ</a>
+            </li>
+          </ul>
+          <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav class="bg-light w-100 position-fixed o-80">
       <div class="nav nav-tabs justify-content-end me-3" id="nav-tab" role="tablist">
         <a href="../index.html" class="me-auto ms-3">SeattleConsulting 2021年度内定者紹介サイト</a>
-        <a href="../index.html" class="nav-link active py-4">メンバー紹介</a>
+        <a href="../index.html#member" class="nav-link active py-4">メンバー紹介</a>
         <a href="../index.html#team" class="nav-link py-4">チーム紹介</a>
         <a href="../index.html#data" class="nav-link py-4">21データ</a>
         <a href="#" class="py-4 border-0" id="nav-contact-tab">エントリー</a>
       </div>
-    </nav>
+    </!-->
     <img src="../../image/header.png" class="img-fluid w-100" alt="...">
     <div class="container tab-content mw-100 mt-5">
       <!-- メンバー詳細 -->
@@ -105,7 +127,7 @@
       </div>
       <div class="bg-light py-3">
         <h5 class="text-center mt-4">他のメンバーを見る</h5>
-        <section class="center slider">
+        <section class="member center slider">
           <div>
             <img src="../../image/person-ex1.png">
           </div>

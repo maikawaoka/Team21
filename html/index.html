@@ -15,13 +15,26 @@
     <title>内定者紹介サイト ｜ シアトルコンサルティング株式会社</title>
   </head>
   <body>
-    <nav class="bg-light w-100 position-fixed o-80">
-      <div class="nav nav-tabs justify-content-end me-3" id="nav-tab" role="tablist">
-        <div class="me-auto ms-3">SeattleConsulting 2021年度内定者紹介サイト</div>
-        <button class="nav-link active py-4" id="nav-member-tab" data-bs-toggle="tab" data-bs-target="#nav-member" type="button" role="tab" aria-controls="nav-member" aria-selected="true">メンバー紹介</button>
-        <button class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" data-bs-target="#nav-team" type="button" role="tab" aria-controls="nav-team" aria-selected="false">チーム紹介</button>
-        <button class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" data-bs-target="#nav-data" type="button" role="tab" aria-controls="nav-data" aria-selected="false">21データ</button>
-        <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 w-100 position-fixed o-80 z-1000">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tabs" aria-controls="nav-tabs" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-tabs">
+          <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link py-4 active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">メンバー紹介</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">チーム紹介</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">21データ</a>
+            </li>
+          </ul>
+          <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
+        </div>
       </div>
     </nav>
     <img src="../image/header.png" class="img-fluid w-100" alt="...">
@@ -110,10 +123,10 @@
             </div>
           </div>
         </div>
-        <div class="filter-result row row-cols-4 mx-auto my-5 w-75">
+        <div id="member-list" class="filter-result row mx-auto my-5">
           <div class="col d-flex-center member kanto bunkei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <!-- TODO: ホバー時のバグ直す -->
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
@@ -122,7 +135,7 @@
           </div>
           <div class="col d-flex-center member kanto rikei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex2-hover.png" class="active">
                 <img src="../image/person-ex2.png">
               </div>
@@ -130,7 +143,7 @@
           </div>
           <div class="col d-flex-center member kanto bunkei nashi">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
               </div>
@@ -138,7 +151,7 @@
           </div>
           <div class="col d-flex-center member kanto bunkei nashi">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex2-hover.png" class="active">
                 <img src="../image/person-ex2.png">
               </div>
@@ -146,7 +159,7 @@
           </div>
           <div class="col d-flex-center member chugoku rikei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
               </div>
@@ -154,7 +167,7 @@
           </div>
           <div class="col d-flex-center member chubu bunkei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex2-hover.png" class="active">
                 <img src="../image/person-ex2.png">
               </div>
@@ -162,7 +175,7 @@
           </div>
           <div class="col d-flex-center member kanto bunkei nashi">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
               </div>
@@ -170,7 +183,7 @@
           </div>
           <div class="col d-flex-center member hokkaido rikei nashi">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex2-hover.png" class="active">
                 <img src="../image/person-ex2.png">
               </div>
@@ -178,7 +191,7 @@
           </div>
           <div class="col d-flex-center member shikoku bunkei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
               </div>
@@ -186,7 +199,7 @@
           </div>
           <div class="col d-flex-center member tohoku bunkei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex2-hover.png" class="active">
                 <img src="../image/person-ex2.png">
               </div>
@@ -194,16 +207,106 @@
           </div>
           <div class="col d-flex-center member kyusyu rikei ari">
             <a href="person/person01.html">
-              <div class="person d-flex align-items-center">
+              <div class="person d-flex-center">
                 <img src="../image/person-ex1-hover.png" class="active">
                 <img src="../image/person-ex1.png">
               </div>
             </a>
           </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col d-flex-center member kyusyu rikei ari">
+            <a href="person/person01.html">
+              <div class="person d-flex-center">
+                <img src="../image/person-ex1-hover.png" class="active">
+                <img src="../image/person-ex1.png">
+              </div>
+            </a>
+          </div>
+          <div class="col"></div>
+          <div class="col"></div>
         </div>
         <div class="bg-light py-3">
           <h5 class="text-center mt-4">他のメンバーを見る</h5>
-          <section class="center slider">
+          <section class="member center slider">
             <div>
               <img src="../image/person-ex1.png">
             </div>
@@ -236,7 +339,7 @@
         <!-- TODO: こっちのカルーセルが初期表示できない -->
         <div class="bg-light py-3">
           <h5 class="text-center mt-4">他のチームを見る</h5>
-          <section class="center slider">
+          <section class="team center slider">
             <div>
               <img src="../image/team-a.png">
             </div>

@@ -1,3 +1,5 @@
+/* NOTE:全体のcolor#393939にしたい */
+/* TODO:画像ヘッダーの入れ替え画質 */
 /******************************************************************************
   slider
 *******************************************************************************/
@@ -17,7 +19,7 @@ width: 100%;
 
 .slick-prev:before,
 .slick-next:before {
-color: black;
+color: #393939;
 }
 
 
@@ -54,6 +56,14 @@ transform: scale(1);
 
 .o-80 {
   opacity: 0.8 !important;
+}
+
+.z-1000 {
+  z-index: 1000 !important;
+}
+
+.w-95 {
+  width: 95% !important;
 }
 
 .person {
@@ -137,6 +147,7 @@ transform: scale(1);
 
 .list-area dt{
   float: left;
+  font-weight: 500;
 }
 
 .list-area dt::after{
@@ -144,7 +155,7 @@ transform: scale(1);
 }
 
 .list-area dd{
-  margin-left: 11vw;
+  margin-left: 13vw;
 }
 
 .person-contents{
@@ -173,11 +184,15 @@ transform: scale(1);
 .detail-content h3{
   font-size: 1.6vw;
   text-align: center;
-  margin-top: 1.5vw;
+  margin-top: 3vw;
 }
 
 .detail-content p{
   font-size: 1.2vw;
   line-height: 1.8;
   margin-top: 2.4vw;
+}
+
+.person img {
+  width: 100%;
 }
