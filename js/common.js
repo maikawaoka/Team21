@@ -99,7 +99,7 @@ $(function() {
     });
   });
 
-  $('.nav-tabs > li').on('click', function() {
+  $('#member-detail-tabs > li').on('click', function() {
     // 選択されたタブのハッシュ
     var hash = location.hash.slice(1);
     // タブのリスト
@@ -128,7 +128,7 @@ function resizeAddClass() {
   var y = 768;
   if (x <= y) {
     $('#member-list').addClass('row-cols-3 w-95').removeClass('row-cols-4 w-75');
-  }else {
+  } else {
     $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
   }
 }
