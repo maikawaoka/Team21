@@ -99,7 +99,7 @@ $(function() {
     });
   });
 
-  $('#member-detail-tabs > li').on('click', function() {
+  $('#detail-tabs > li').on('click', function() {
     // 選択されたタブのハッシュ
     var hash = location.hash.slice(1);
     // タブのリスト

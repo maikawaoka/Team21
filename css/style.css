@@ -70,6 +70,10 @@ transform: scale(1);
   width: 60% !important;
 }
 
+.w-80 {
+  width: 80% !important;
+}
+
 .w-95 {
   width: 95% !important;
 }
@@ -78,8 +82,24 @@ transform: scale(1);
   margin: 0 20vw !important;
 }
 
+.mb-3vw {
+  margin-bottom: 3vw !important;
+}
+
+.mb-10vw {
+  margin-bottom: 10vw !important;
+}
+
 .my-5vw {
   margin: 5vw 0 !important;
+}
+
+.mx-1vw {
+  margin: 0 1vw !important;
+}
+
+.h-350px {
+  height: 350px;
 }
 
 .person {
@@ -468,3 +488,52 @@ transform: scale(1);
   padding-top: 1vw;
   text-align: center;
 }
+
+/******************************************************************************
+  team detail
+*******************************************************************************/
+.member-box {
+  position:relative;
+  width:200px;
+  height:200px;
+}
+
+.member-box > .member {
+  height: 50vh;
+}
+
+.member-box > .member:nth-child(2n+1) {
+  position: absolute;
+  top: 0;
+}
+
+.member-box > .member:nth-child(2n) {
+  position: absolute;
+  bottom: 0;
+}
+
+.box { 
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 2px;
+}
+
+.box:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.txbox {
+  flex-grow: 1;
+}
+
+.txbox:nth-of-type(even) {
+  flex-grow: 2;
+  background: #fff;
+}
+
+.answer-box:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+
