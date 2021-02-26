@@ -23,13 +23,13 @@
         </button>
         <div class="collapse navbar-collapse" id="nav-tabs">
           <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0" role="tablist">
-            <li class="nav-item" role="presentation">
+            <li id="member" class="nav-item" role="presentation">
               <a class="nav-link py-4 active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">メンバー紹介</a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li id="team" class="nav-item" role="presentation">
               <a class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">チーム紹介</a>
             </li>
-            <li class="nav-item" role="presentation">
+            <li id="data" class="nav-item" role="presentation">
               <a class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">21データ</a>
             </li>
           </ul>
@@ -334,8 +334,74 @@
           </section>
         </div>
       </div>
-      <div class="tab-pane fade" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab">
+      <div class="tab-pane fade mx-20vw my-5vw" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab">
         <!-- チーム一覧書くところ -->
+        <div class="d-flex-center flex-column">
+          <h1 class="text-center my-3 text-primary">チーム紹介</h1>
+          <h3 class="my-3">Team21のメンバー30人を紹介します！</h3>
+          <div id="team-list">
+            <div class="team left">
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team01.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+              <div class="explaination">
+                <p class="team-name">西日本</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+            </div>
+            <div class="team right">
+              <div class="explaination">
+                <p class="team-name">ぽんぽん本舗</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team02.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+            </div>
+            <div class="team left">
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team03.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+              <div class="explaination">
+                <p class="team-name">Arcobaleno</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+            </div>
+            <div class="team right">
+              <div class="explaination">
+                <p class="team-name">Blueocean</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team04.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+            </div>
+            <div class="team left">
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team05.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+              <div class="explaination">
+                <p class="team-name">きらきら星</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+            </div>
+            <div class="team right">
+              <div class="explaination">
+                <p class="team-name">世界進出</p>
+                <p class="description">△△で〇〇なチームです！</p>
+              </div>
+              <img class="team-image" src="../image/team-a.png">
+              <a href="team/team06.html" class="go-details">
+                <img class="go-image" src="../image/go-details.png">
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- TODO: こっちのカルーセルが初期表示できない -->
         <div class="bg-light py-3">
           <h5 class="text-center mt-4">他のチームを見る</h5>
@@ -369,6 +435,67 @@
       </div>
       <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
         <!-- データ書くところ -->
+        <div class="d-flex-center flex-column">
+          <h1 class="text-center my-3 text-primary">21データ</h1>
+          <h3 class="my-3">今年の内定者チームの情報です。</h3>
+        </div>
+        <!-- grid使う -->
+        <div class="content">
+          <div class="grid">
+            <div class="grid-container1">
+              <div class="grid-panel">
+                <div class="grid-title">出身</div>
+                <div class="grid-contents">
+                  <img src="../image/birthplace.svg">
+                  <span class="birthplace">あ</span>
+                  <span class="count"></span>
+                </div>
+                <div class="comment">日本全国からいろんな方が集まっています。</div>
+              </div>
+            </div>
+            <div class="grid-container2">
+              <div class="grid-panel">
+                <div class="grid-title">文理</div>
+                <div class="grid-contents">
+                  <img src="../image/bunri.svg">
+                  <span class="">あ</span>
+                </div>
+                <div class="comment">エンジニアは理系のイメージが強いと思いますが、シアトルは文系出身も多く入社します！</div>
+              </div>
+            </div>
+            <div class="grid-container3">
+              <div class="grid-panel">
+                <div class="grid-title">プログラミング経験</div>
+                <div class="grid-contents">
+                  <img src="../image/programing.svg">
+                  <span class="">あ</span>
+                </div>
+                <div class="comment">ほとんどが未経験のメンバーです！一緒に成長していこう！</div>
+              </div>
+            </div>
+            <div class="grid-container4">
+              <div class="grid-panel">
+                <div class="grid-title">男女比</div>
+                <div class="grid-contents">
+                  <img src="../image/danjo.svg">
+                  <span class="">あ</span>
+                </div>
+                <div class="comment">男女比は4:6です。今年は女性が多いですね！</div>
+              </div>
+            </div>
+            <div class="grid-container5">
+              <div class="grid-panel">
+                <div class="grid-title">
+                  <div class="grid-title">内定者出身校一覧</div>
+                  <div class="grid-sub-title">(五十音順)</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-contents6">
+              <img class="">
+              <span class=""></span>
+            </div>
+          </div>
       </div>
     </div>
     <footer class="bg-primary py-5 text-center text-light">Copyright © 2021 Team20. All Rights Reserved.</footer>
