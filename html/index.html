@@ -24,16 +24,30 @@
         <div class="collapse navbar-collapse" id="nav-tabs">
           <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0" role="tablist">
             <li id="member" class="nav-item" role="presentation">
-              <a class="nav-link py-4 active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">メンバー紹介</a>
+              <a class="nav-link py-4 active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">
+                <p>メンバー紹介</p>
+                <p class="tab-en">Member</p>
+              </a>
             </li>
             <li id="team" class="nav-item" role="presentation">
-              <a class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">チーム紹介</a>
+              <a class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">
+                <p>チーム紹介</p>
+                <p class="tab-en">Team</p>
+              </a>
             </li>
             <li id="data" class="nav-item" role="presentation">
-              <a class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">21データ</a>
+              <a class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">
+                <p>21データ</p>
+                <p class="tab-en">Data</p>
+              </a>
             </li>
           </ul>
-          <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
+          <button class="py-4 border-0" id="nav-contact-tab">
+            <a href="https://www.seattleconsulting.co.jp/freshers/contact_input.php" class="go-details">
+              <p>エントリー</p>
+              <p class="tab-en">Entry</p>
+            </a>
+          </button>
         </div>
       </div>
     </nav>
@@ -434,21 +448,52 @@
         </div>
       </div>
       <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
-        <!-- データ書くところ -->
         <div class="d-flex-center flex-column">
           <h1 class="text-center my-3 text-primary">21データ</h1>
           <h3 class="my-3">今年の内定者チームの情報です。</h3>
         </div>
         <!-- grid使う -->
-        <div class="content">
+        <div class="content mb-10vw">
           <div class="grid">
             <div class="grid-container1">
               <div class="grid-panel">
                 <div class="grid-title">出身</div>
                 <div class="grid-contents">
                   <img src="../image/birthplace.svg">
-                  <span class="birthplace">あ</span>
-                  <span class="count"></span>
+                  <span class="count">
+                    <dl>
+                      <dt>北海道</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>東北</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>関東</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>中部</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>近畿</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>中国</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>四国</dt>
+                      <dd>人</dd>
+                    </dl>
+                    <dl>
+                      <dt>九州</dt>
+                      <dd>人</dd>
+                    </dl>
+                  </span>
                 </div>
                 <div class="comment">日本全国からいろんな方が集まっています。</div>
               </div>
@@ -458,7 +503,16 @@
                 <div class="grid-title">文理</div>
                 <div class="grid-contents">
                   <img src="../image/bunri.svg">
-                  <span class="">あ</span>
+                  <span class="count">
+                    <dl>
+                      <dt>文系</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                    <dl>
+                      <dt>理系</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                  </span>
                 </div>
                 <div class="comment">エンジニアは理系のイメージが強いと思いますが、シアトルは文系出身も多く入社します！</div>
               </div>
@@ -468,7 +522,16 @@
                 <div class="grid-title">プログラミング経験</div>
                 <div class="grid-contents">
                   <img src="../image/programing.svg">
-                  <span class="">あ</span>
+                  <span class="count">
+                    <dl>
+                      <dt>経験有</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                    <dl>
+                      <dt>経験無</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                  </span>
                 </div>
                 <div class="comment">ほとんどが未経験のメンバーです！一緒に成長していこう！</div>
               </div>
@@ -478,7 +541,16 @@
                 <div class="grid-title">男女比</div>
                 <div class="grid-contents">
                   <img src="../image/danjo.svg">
-                  <span class="">あ</span>
+                  <span class="count">
+                    <dl>
+                      <dt>男性</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                    <dl>
+                      <dt class="count-bl">女性</dt>
+                      <dd class="count-bl">5人</dd>
+                    </dl>
+                  </span>
                 </div>
                 <div class="comment">男女比は4:6です。今年は女性が多いですね！</div>
               </div>
@@ -493,9 +565,9 @@
             </div>
             <div class="grid-contents6">
               <img class="">
-              <span class=""></span>
             </div>
           </div>
+        </div>
       </div>
     </div>
     <footer class="bg-primary py-5 text-center text-light">Copyright © 2021 Team20. All Rights Reserved.</footer>
