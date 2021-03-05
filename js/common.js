@@ -66,14 +66,7 @@ $(function() {
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [{
-      breakpoint: 768,  //ブレイクポイントを指定
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
+    slidesToScroll: 3
   });
 
   $('#nav-member-tab').click(function () {
@@ -128,7 +121,11 @@ function resizeAddClass() {
   var y = 768;
   if (x <= y) {
     $('#member-list').addClass('row-cols-3 w-95').removeClass('row-cols-4 w-75');
+    $('#team-detail').addClass('w-95').removeClass('w-60');
+    $('.slider').css('width', '90%');
   } else {
     $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
+    $('#team-detail').addClass('w-60').removeClass('w-95');
+    $('.slider').css('width', '60%');
   }
 }
