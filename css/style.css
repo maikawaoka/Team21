@@ -511,13 +511,13 @@ transform: scale(1);
 
 .count dt{
   float: left;
-  margin-bottom: 1vw;
+  margin-bottom: 0;
   /*margin-right: 2.5vw;*/
 }
 
 .count dd{
   margin-left: 2.5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 0;
   float: right;
 }
 
