@@ -501,6 +501,15 @@ transform: scale(1);
 /******************************************************************************
   data
 *******************************************************************************/
+#nav-data h1{
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+  font-size: 3vw;
+}
+
+#nav-data h3{
+  font-size: 1.1vw;
+}
+
 .grid {
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
   color: #393939;
@@ -550,7 +559,7 @@ transform: scale(1);
   grid-column: 1 / 4;
   background: #FCFACB;
   border-radius: 0.8vw;
-  height: 25vw;
+  /*height: 25vw;*/
 }
 
 .grid-panel {
@@ -560,6 +569,7 @@ transform: scale(1);
 .grid-title {
   padding-bottom: 1vw;
   font-size: 1.5vw;
+  font-weight: 700;
 }
 
 .grid-contents {
@@ -577,26 +587,30 @@ transform: scale(1);
   margin-left: 1vw;
 }
 
-.count dl{
+.grid-container1 dl{
   margin: 0;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .count dt{
   float: left;
   margin-bottom: 0;
+  font-size: 1.1vw;
   /*margin-right: 2.5vw;*/
 }
 
 .count dd{
   margin-left: 2.5vw;
   margin-bottom: 0;
-  float: right;
+  font-size: 1.1vw;
+  float: left;
 }
 
 dd.count-bl {
   color: #158bde;
-  font-size: 4vw;
+  font-size: 4.4vw;
+  line-height: 1;
+  float: right;
 }
 
 .grid-container1 dd::before{
@@ -606,13 +620,26 @@ dd.count-bl {
 .smallChar{
   font-size: 1vw;
 }
+
 .comment {
   padding-top: 1vw;
   text-align: center;
+  font-size: 1vw;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.grid-container5 .grid-title{
+  text-align: center;
+}
+
+.grid-sub-title{
+  font-size: 1vw;
 }
 
 .alma-mater td{
   width: 20vw;
+  font-size: 1.1vw;
 }
 
 /******************************************************************************
