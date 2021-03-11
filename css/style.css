@@ -1,3 +1,38 @@
+/* Loading Block */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  margin: 200px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+/* Loading Animation */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* Hide Loading Block */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* NOTE:全体のcolor#393939にしたい */
 /* TODO:画像ヘッダーの入れ替え画質 */
 /******************************************************************************
@@ -40,10 +75,6 @@ transform: scale(1);
 /******************************************************************************
   common
 *******************************************************************************/
-* {
-  box-sizing: border-box !important;
-}
-
 .d-flex-center {
   display: flex !important;
   justify-content: center !important;
@@ -102,24 +133,47 @@ transform: scale(1);
   height: 350px;
 }
 
+.member {
+  height: 25vw;
+}
+
+.member a {
+  width: 100%;
+  height: 100%;
+}
+
 .person {
   position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+	cursor: pointer;
 }
 
-.person .active {
+.person img {
+  width: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: 0.5s; 
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: block;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
 }
 
-.person img:last-child:hover {
+.person img:first-child {
   opacity: 0;
 }
-
-.person:hover .active {
+.person:hover img:first-child {
+  width: 100%;
   opacity: 1;
+}
+
+.person:hover img:nth-of-type(2) {
+  width: 80%;
+  opacity: 0;
 }
 
 .nav-link > p {
@@ -129,6 +183,29 @@ transform: scale(1);
 
 .tab-en {
   font-size: 1vw;
+}
+
+.arrow-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8vw;
+  border: 3px solid #158bde;
+  border-radius: 25vw;
+  position: fixed;
+  bottom: 8vw;
+  right: 2vw;
+  opacity: 0;
+  transition: all 0.65s;
+}
+
+.arrow-up-img {
+  width: 1.8vw;
+}
+
+.arrow-up.active {
+  opacity: 1;
+  transition: all 0.65s;
 }
 
 /******************************************************************************
@@ -244,10 +321,6 @@ transform: scale(1);
   font-size: 1.2vw;
   line-height: 1.8;
   margin-top: 2.4vw;
-}
-
-.person img {
-  width: 100%;
 }
 
 @media screen and (max-width:599px){

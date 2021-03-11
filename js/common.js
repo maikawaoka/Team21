@@ -1,6 +1,15 @@
 $(function() {
+  setTimeout(() => {
+    const spinner = document.getElementById('loading');
+    // Add .loaded to .loading
+    spinner.classList.add('loaded');
+  }, 1000);
+
   resizeAddClass();
 
+  /******************************************************************************
+    絞り込み
+  *******************************************************************************/
   var rule = {
     birthplace: [],
     bunri: "",
@@ -8,29 +17,35 @@ $(function() {
   };
 
   $('.tags > button').on('click', function() {
-    // TODO: 文理とかのタグが切り替えられない
+    if(!$(this).hasClass('border-primary') && $(this).parent().attr('id') !== 'birthplace') {
+      tagReset($(this).parent().attr('id'));
+    }
     $(this).toggleClass('border-primary');
-    $(this).hasClass('border-primary') ? tagSelect() : tagUnSelect();
+    $(this).hasClass('border-primary') ? tagSelect($(this)) : tagUnSelect($(this));
   });
 
-  function tagSelect() {
-    switch($(this).parent().attr('id')) {
+  function tagReset(id) {
+    $(`#${id} > button`).removeClass('border-primary');
+  }
+
+  function tagSelect(element) {
+    switch(element.parent().attr('id')) {
       case 'birthplace':
-        rule.birthplace.push($(this).attr('id'));
+        rule.birthplace.push(element.attr('id'));
         break;
       case 'bunri':
-        rule.bunri = $(this).attr('id');
+        rule.bunri = element.attr('id');
         break;
       case 'programing':
-        rule.programing = $(this).attr('id');
+        rule.programing = element.attr('id');
         break;
     }
   }
 
-  function tagUnSelect() {
-    switch($(this).parent().attr('id')) {
+  function tagUnSelect(element) {
+    switch(element.parent().attr('id')) {
       case 'birthplace':
-        rule.birthplace = rule.birthplace.filter(id => id != $(this).attr('id'));
+        rule.birthplace = rule.birthplace.filter(id => id != element.attr('id'));
         break;
       case 'bunri':
         rule.bunri = "";
@@ -43,7 +58,6 @@ $(function() {
 
   $('.clear').on('click', function() {
     $('.tags > button').removeClass('border-primary');
-    $('.tags > button').addClass('border-light');
     rule = {
       birthplace: [],
       bunri: "",
@@ -54,7 +68,18 @@ $(function() {
   $('.sort').on('click', function() {
     // 該当メンバー表示
     $('.filter-result > div').each(function(index, el){
-      if(rule.birthplace.some(value => $(el).hasClass(value)) && $(el).hasClass(rule.bunri) && $(el).hasClass(rule.programing)) {
+      $(el).removeClass('d-none');
+      const filterRule = [];
+      Object.keys(rule).forEach(key => {
+        if(rule[key] != 0) {
+          if(key === 'birthplace') {
+            filterRule.push(rule.birthplace.some(value => $(el).hasClass(value)));
+          } else {
+            filterRule.push($(el).hasClass(rule[key]));
+          }
+        }
+      });
+      if(filterRule.every(val => val)) {
         $(el).addClass('d-flex-center');
       } else {
         $(el).addClass('d-none');
@@ -62,6 +87,9 @@ $(function() {
     });
   });
 
+  /******************************************************************************
+    slider
+  *******************************************************************************/
   var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
@@ -92,6 +120,9 @@ $(function() {
     });
   });
 
+  /******************************************************************************
+    tab
+  *******************************************************************************/
   $('#detail-tabs > li').on('click', function() {
     // 選択されたタブのハッシュ
     var hash = location.hash.slice(1);
@@ -107,7 +138,19 @@ $(function() {
     // 選択されたタブにactiveクラスとshowクラスを付与する
     $(`#nav-${hash}-tab`).addClass('active');
     $(`#nav-${hash}`).addClass('show active');
-  })
+  });
+
+  /******************************************************************************
+    scroll
+  *******************************************************************************/
+  $(window).on('scroll', function() {
+    //スクロール位置を取得
+    if ( $(this).scrollTop() < 50 ) {
+      $('.arrow-up').removeClass('active');
+    } else {
+      $('.arrow-up').addClass('active');
+    }
+  });
 });
 
 $(window).resize(function(){
@@ -121,10 +164,12 @@ function resizeAddClass() {
   var y = 768;
   if (x <= y) {
     $('#member-list').addClass('row-cols-3 w-95').removeClass('row-cols-4 w-75');
+    $('#member-list > .member').css('height', '40vw');
     $('#team-detail').addClass('w-95').removeClass('w-60');
-    $('.slider').css('width', '90%');
+    $('.slider').css('width', '80%');
   } else {
     $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
+    $('#member-list > .member').css('height', '25vw');
     $('#team-detail').addClass('w-60').removeClass('w-95');
     $('.slider').css('width', '60%');
   }
