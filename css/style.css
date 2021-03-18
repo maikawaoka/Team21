@@ -612,7 +612,7 @@ transform: scale(1);
 
 .count2-4 dd{
   margin-top: 1.4vw;
-  margin-left: 0.5vw;
+  margin-left: 0vw;
 }
 
 dd.count-bl {
@@ -652,9 +652,10 @@ dd.count-bl {
 }
 
 @media screen and (max-width:600px){
+
   .grid{
     margin: 0;
-    width: 240px;
+    width: 90vw;
   }
 
   .grid-contents{
@@ -695,7 +696,7 @@ dd.count-bl {
   }
 
   .alma-mater td{
-    width: 80px;
+    width: 30vw;
     vertical-align: baseline;
   }
 }
