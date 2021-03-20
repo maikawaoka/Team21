@@ -11,10 +11,12 @@ public class InsertData{
     public static void main(String args[]){
 
         BufferedReader br_csv = null;
+        BufferedReader br_csv2 = null;
 
         //***********read csv file***************
         //the number of people is 30 + title = 31
         List<String[]> person = new ArrayList<String[]>(31);
+        List<String[]> person2 = new ArrayList<String[]>(31);
 
         try{
             br_csv = new BufferedReader(new InputStreamReader(new FileInputStream("profile.csv")));
@@ -42,26 +44,66 @@ public class InsertData{
             }
         }
 
+        //read sentence
+        try{
+            br_csv2 = new BufferedReader(new InputStreamReader(new FileInputStream("person-text.csv")));
+            
+            //the number of entry is 6
+            String[] data2 = new String[6];
+            String line2;
+            int i = 0;
+            
+            //read csv file => List person
+            while((line2 = br_csv2.readLine()) != null){
+                data2 = line2.split(",");
+                person2.add(i,data2);
+                i++;
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        finally{
+            try {
+                br_csv2.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         //************Replacement****************
         //i=0 is title row
-        for(int i=1; i<person.size(); i++){            
+        for(int i=1; i<31; i++){            
             BufferedReader br_html = null;
             BufferedWriter bw = null;
 
             try{
-                //sorce file is person0.html
+                //source file is person0.html
                 br_html = new BufferedReader(new InputStreamReader(new FileInputStream("person0.html"),"UTF-8"));
-                bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("person" + (i) + ".html"),"UTF-8"));
-
+                if(i<10){
+                    bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("person0" + (i) + ".html"),"UTF-8"));
+                }
+                else{
+                    bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("person" + (i) + ".html"),"UTF-8"));
+                }
                 String line;
 
-                for(int j=0; j<person.get(0).length; j++){
+                for(int j=0; j<14; j++){
                     while((line = br_html.readLine()) != null){
 
                         //replacement
-                        String replaceText = line.replace("Replace" + (j+1), person.get(i)[j]);
-                        bw.write(replaceText);
-                        bw.newLine();
+                        String replaceText;
+                        if(j<8){
+                            replaceText = line.replace("Replace" + (j+1), person.get(i)[j]);
+                            bw.write(replaceText);
+                            bw.newLine();
+                        }
+                        else{
+                            replaceText = line.replace("Replace" + (j+1), person2.get(i)[j-8]);
+                            bw.write(replaceText);
+                            bw.newLine();
+                        }
+                        
 
                         if(replaceText != line){
                             break;
