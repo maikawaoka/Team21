@@ -88,7 +88,7 @@
 }
 .slick-prev:before
 {
-    content: url(../image/prev.png);
+    content: url(../image/detail/prev.png);
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -106,7 +106,7 @@
 }
 .slick-next:before
 {
-    content: url(../image/next.png);
+    content: url(../image/detail/next.png);
 }
 [dir='rtl'] .slick-next:before
 {
