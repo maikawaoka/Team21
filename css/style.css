@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   transition: all 1s;
-  background-color: #0bd;
+  background-color: #158bde;
   position: fixed;
   top: 0;
   left: 0;
@@ -131,6 +131,17 @@ transform: scale(1);
 
 .h-350px {
   height: 350px;
+}
+
+.bg-primary {
+  background-color: #158bde !important;
+}
+
+/* 一旦ごめん */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .member {
