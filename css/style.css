@@ -648,4 +648,21 @@ dd.count-bl {
   flex-direction: row-reverse;
 }
 
+/******************************************************************************
+  header margin
+*******************************************************************************/
+.img-fluid{
+  margin-top: 39px;
+}
 
+@media(min-width: 992px){
+  .img-fluid{
+    margin-top: 73px;
+  }
+}
+
+@media(max-width: 483px){
+  .img-fluid{
+    margin-top: 79px;
+  }
+}
