@@ -233,21 +233,52 @@ transform: scale(1);
 /******************************************************************************
   member 
 *******************************************************************************/
-/* button .btn.border.border-primary {
-  margin: 0;
-} */
-
-.border-primary {
-  border-color: #158bde;
+.font-s {
+  font-size: 1.4vw;
 }
 
 .sort-icon {
-  width: 2.5vw;
+  width: 2vw;
 }
 
-/* button.btn.border.border-primary > p {
-  font-size: 1.3vw;
-  color: red;
+#border {
+  border-color: 2px #158bde;
+}
+
+.btn-primary {
+  color: #158bde;
+  background-color: #fff;
+  border-color: 1vw #158bde !important;
+}
+
+.border-primary {
+  border-color: #158bde !important;
+}
+
+.btn-check:hover+.btn-primary, .btn-primary:hover {
+  color: #fff !important;
+  background-color: #158bde !important;
+  border-color: #158bde !important;
+  box-shadow: none !important;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  color: #fff !important;
+  background-color: #158bde !important;
+  border-color: #158bde !important;
+  box-shadow: none !important;
+}
+
+/* .team-image:first-child {
+  opacity: 0;
+} */
+
+/* .team:hover .team-image:first-child {
+  opacity: 1;
+} */
+
+/* .team:hover .team-image:nth-of-type(2) {
+  opacity: 0;
 } */
 
 /******************************************************************************
@@ -470,41 +501,8 @@ transform: scale(1);
   position: relative;
 }
 
-.team.left .go-details {
-  margin-top: 16vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8vw;
-  background: #158bde;
-  border-radius: 25vw;
-  height: 3.5vw;
-  position: absolute;
-  left: 25vw;
-  top: 3vw;
-}
-
-.team.right .go-details {
-  margin-top: 16vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8vw;
-  background: #158bde;
-  border-radius: 25vw;
-  height: 3.5vw;
-  position: absolute;
-  right: 7vw;
-  top: 2vw;
-}
-
-.go-image {
-  width: 2vw
-}
-
 .team-image {
   width: 36vw;
-  border-radius: 25vw;
 }
 
 .team.left .explaination {
@@ -837,7 +835,6 @@ dd.count-bl {
     margin-top: 79px;
   }
 }
-<<<<<<< HEAD
 
 /******************************************************************************
   
@@ -872,5 +869,3 @@ div.nav-link {
 div.nav-link > p {
   margin-bottom: 0.5vw;
 }
-=======
->>>>>>> main
