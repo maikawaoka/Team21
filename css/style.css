@@ -778,9 +778,17 @@ dd.count-bl {
   flex-direction: row-reverse;
 }
 
+.color-gray{
+  color: gray;
+}
+
 /******************************************************************************
   header margin
 *******************************************************************************/
+.navbar{
+  top: 0;
+}
+
 .img-fluid{
   margin-top: 39px;
 }
@@ -788,6 +796,10 @@ dd.count-bl {
 @media(min-width: 992px){
   .img-fluid{
     margin-top: 73px;
+  }
+
+  .header-margin{
+    margin-top: 124px;
   }
 }
 
