@@ -140,6 +140,10 @@ $(function() {
     $(`#nav-${hash}`).addClass('show active');
   });
 
+  $("#entry").click(function() {
+    window.location.href = 'https://www.seattleconsulting.co.jp/freshers/contact_input.php';
+  });
+
   /******************************************************************************
     scroll
   *******************************************************************************/

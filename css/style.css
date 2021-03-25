@@ -133,15 +133,22 @@ transform: scale(1);
   height: 350px;
 }
 
+.bg-light {
+  background-color: #fff !important;
+  opacity: 0.85;
+}
+
 .bg-primary {
   background-color: #158bde !important;
 }
 
-/* 一旦ごめん */
+.text-primary {
+  color: #158bde !important;
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+}
+
 .img-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  text-align: center;
 }
 
 .member {
@@ -192,6 +199,11 @@ transform: scale(1);
   font-size: 1.1vw;
 }
 
+.nav-link.active > p,.nav-link:hover > p {
+  height: 1.5vw;
+  font-size: 1.2vw;
+}
+
 .tab-en {
   font-size: 1vw;
 }
@@ -218,6 +230,25 @@ transform: scale(1);
   opacity: 1;
   transition: all 0.65s;
 }
+/******************************************************************************
+  member 
+*******************************************************************************/
+/* button .btn.border.border-primary {
+  margin: 0;
+} */
+
+.border-primary {
+  border-color: #158bde;
+}
+
+.sort-icon {
+  width: 2.5vw;
+}
+
+/* button.btn.border.border-primary > p {
+  font-size: 1.3vw;
+  color: red;
+} */
 
 /******************************************************************************
   member detail
@@ -260,9 +291,7 @@ transform: scale(1);
 .name-en{
   font-size: 3.4vw;
   font-weight: bold;
-  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
   line-height: 1.1;
-  color: #158bde;
   margin-bottom: 0vw;
 }
 
@@ -795,4 +824,38 @@ dd.count-bl {
   .img-fluid{
     margin-top: 79px;
   }
+}
+
+/******************************************************************************
+  
+*******************************************************************************/
+.container-fluid {
+  height: 6vw;
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  height: 6vw;
+}
+
+a.navbar-brand {
+  margin-left: 1vw;
+}
+
+.nav-tabs .nav-item {
+  margin: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #158bde !important;
+  width: 9.5vw;
+}
+
+div.nav-link {
+  text-align: center;
+}
+
+div.nav-link > p {
+  margin-bottom: 0.5vw;
 }
