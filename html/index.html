@@ -23,48 +23,50 @@
     <div id="main-content">
       <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 w-100 position-fixed o-80 z-1000">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
+          <a class="navbar-brand text-primary" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tabs" aria-controls="nav-tabs" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="nav-tabs">
             <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0" role="tablist">
               <li id="member" class="nav-item" role="presentation">
-                <a class="nav-link py-4 active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">
+                <div class="nav-link active" id="nav-member-tab" data-bs-toggle="tab" href="#nav-member" role="tab" aria-controls="nav-member" aria-selected="true">
                   <p>メンバー紹介</p>
                   <p class="tab-en">Member</p>
-                </a>
+                </div>
               </li>
               <li id="team" class="nav-item" role="presentation">
-                <a class="nav-link py-4" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">
+                <div class="nav-link" id="nav-team-tab" data-bs-toggle="tab" href="#nav-team" role="tab" aria-controls="nav-team" aria-selected="false">
                   <p>チーム紹介</p>
                   <p class="tab-en">Team</p>
-                </a>
+                </div>
               </li>
               <li id="data" class="nav-item" role="presentation">
-                <a class="nav-link py-4" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">
-                  <p>21データ</p>
-                  <p class="tab-en">Data</p>
-                </a>
+                <div class="nav-link" id="nav-data-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">
+                  <p>21について</p>
+                  <p class="tab-en">About us</p>
+                </div>
+              </li>
+              <li id="entry" class="nav-item" role="presentation">
+                <div class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">
+                  <p>エントリー</p>
+                  <p class="tab-en">Entry</p>
+                </div>
               </li>
             </ul>
-            <button class="py-4 border-0" id="nav-contact-tab">
-              <a href="https://www.seattleconsulting.co.jp/freshers/contact_input.php" class="go-details">
-                <p>エントリー</p>
-                <p class="tab-en">Entry</p>
-              </a>
-            </button>
           </div>
         </div>
       </nav>
-      <img src="../image/common/header.png" class="img-fluid img-center header-margin" alt="...">
+      <div class="img-center bg-primary">
+        <img src="../image/common/header.png" class="img-fluid" alt="...">
+      </div>
       <div class="container tab-content mw-100 mt-5">
         <div class="tab-pane fade show active" id="nav-member" role="tabpanel" aria-labelledby="nav-member-tab">
           <div class="d-flex-center flex-column">
             <h1 class="text-center my-3 text-primary">メンバー紹介</h1>
             <h3 class="my-3">Team21のメンバー30人を紹介します！</h3>
             <!-- Button trigger modal -->
-            <button type="button" class="btn border border-primary rounded-pill p-3 my-3 text-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+            <button type="button" class="btn btn-primary font-s rounded-pill border-primary text-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
               <img class="sort-icon" src="../image/member/sort.png">
               メンバーを絞り込む
             </button>
@@ -78,7 +80,7 @@
                 </div>
                 <div class="modal-body">
                   <h5 class="modal-title text-center" id="filterModalLabel">メンバーを絞り込む</h5>
-                  <div class="bg-light p-2 mb-3">出身</div>
+                  <div class="bg-light font-p p-2 mb-3">出身</div>
                   <div id="birthplace" class="row row-cols-8 mb-3 mx-1 tags">
                     <button id="hokkaido" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
                       北海道
@@ -491,9 +493,9 @@
             <h3 class="my-3">Team21のメンバー30人を紹介します！</h3>
             <div id="team-list">
               <div class="team left">
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team01.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_a_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_a.png"> -->
+                <a href="team/team01.html">
                 </a>
                 <div class="explaination">
                   <p class="team-name">西日本</p>
@@ -505,15 +507,15 @@
                   <p class="team-name">ぽんぽん本舗</p>
                   <p class="description">△△で〇〇なチームです！</p>
                 </div>
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team02.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_b_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_b.png"> -->
+                <a href="team/team02.html">
                 </a>
               </div>
               <div class="team left">
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team03.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_c_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_c.png"> -->
+                <a href="team/team03.html">
                 </a>
                 <div class="explaination">
                   <p class="team-name">Arcobaleno</p>
@@ -525,15 +527,15 @@
                   <p class="team-name">Blueocean</p>
                   <p class="description">△△で〇〇なチームです！</p>
                 </div>
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team04.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_d_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_d.png"> -->
+                <a href="team/team04.html">
                 </a>
               </div>
               <div class="team left">
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team05.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_e_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_e.png"> -->
+                <a href="team/team05.html">
                 </a>
                 <div class="explaination">
                   <p class="team-name">きらきら星</p>
@@ -545,9 +547,9 @@
                   <p class="team-name">世界進出</p>
                   <p class="description">△△で〇〇なチームです！</p>
                 </div>
-                <img class="team-image" src="../image/team-a.png">
-                <a href="team/team06.html" class="go-details">
-                  <img class="go-image" src="../image/team/go_details.png">
+                <img class="team-image" src="../image/team/after/team_f_hover.png">
+                <!-- <img class="team-image" src="../image/team/before/team_f.png"> -->
+                <a href="team/team06.html">
                 </a>
               </div>
             </div>
@@ -557,28 +559,22 @@
             <h5 class="text-center mt-4">他のチームを見る</h5>
             <section class="team center slider">
               <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_a.png">
               </div>
               <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_b.png">
               </div>
               <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_c.png">
               </div>
               <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_d.png">
               </div>
               <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_e.png">
               </div>
               <div>
-                <img src="../image/team-a.png">
-              </div>
-              <div>
-                <img src="../image/team-a.png">
-              </div>
-              <div>
-                <img src="../image/team-a.png">
+                <img src="../image/team/before/team_f.png">
               </div>
             </section>
           </div>
@@ -750,7 +746,7 @@
         </div>
       </div>
       <a href="#" class="arrow-up">
-        <img class ="arrow-up-img" src="../image/common/arrow-up.png">
+        <img class ="arrow-up-img" src="../image/common/arrow_up.png">
       </a>
       <footer class="bg-primary py-5 text-center text-light">Copyright © 2021 Team20. All Rights Reserved.</footer>
     </div>
