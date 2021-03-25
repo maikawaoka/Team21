@@ -88,18 +88,23 @@ public class InsertData{
                 }
                 String line;
 
-                for(int j=0; j<14; j++){
+                for(int j=0; j<15; j++){
                     while((line = br_html.readLine()) != null){
 
                         //replacement
                         String replaceText;
-                        if(j<8){
-                            replaceText = line.replace("Replace" + (j+1), person.get(i)[j]);
+                        if(j==0){
+                            replaceText = line.replace("Replace" + j, "member/detail/person" + i);
+                            bw.write(replaceText);
+                            bw.newLine();
+                        }
+                        else if(j<9){
+                            replaceText = line.replace("Replace" + j, person.get(i)[j-1]);
                             bw.write(replaceText);
                             bw.newLine();
                         }
                         else{
-                            replaceText = line.replace("Replace" + (j+1), person2.get(i)[j-8]);
+                            replaceText = line.replace("Replace" + j, person2.get(i)[j-9]);
                             bw.write(replaceText);
                             bw.newLine();
                         }
