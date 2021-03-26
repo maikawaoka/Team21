@@ -1,11 +1,25 @@
 $(function() {
-  setTimeout(() => {
-    const spinner = document.getElementById('loading');
-    // Add .loaded to .loading
-    spinner.classList.add('loaded');
-  }, 1000);
-
   resizeAddClass();
+
+  /******************************************************************************
+    ヘッダータブの切り替え
+  *******************************************************************************/
+
+  let tabs = $(".tab"); // tabのクラスを全て取得し、変数tabsに配列で定義
+  $(".tab").on("click", function() { // tabをクリックしたらイベント発火
+    if ($(this).attr('id') === 'entry') return;
+    $(".is-active").removeClass("is-active"); // activeクラスを消す
+    $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
+    const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+    $(".tab-content > .tab-pane").removeClass("show active").eq(index).addClass("show active"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+  });
+
+  let sp_tabs = $('.drawer-item');
+  $('.drawer-item').on("click", function() {
+    if ($(this).attr('id') === 'entry') return;
+    const index = sp_tabs.index(this);
+    $(".tab-content > .tab-pane").removeClass("show active").eq(index).addClass("show active");
+  })
 
   /******************************************************************************
     絞り込み
@@ -167,12 +181,16 @@ function resizeAddClass() {
   //windowの分岐幅をyに代入
   var y = 768;
   if (x <= y) {
+    $('#pc-header').hide();
+    $('#sp-header').show();
     $('#member-list').addClass('row-cols-3 w-95').removeClass('row-cols-4 w-75');
     $('#member-list > .member').css('height', '40vw');
     $('#team-detail').addClass('w-95').removeClass('w-60');
     $('.slider').css('width', '80%');
     $('#birthplace').addClass('row-cols-4').removeClass('row-cols-8');
   } else {
+    $('#pc-header').show();
+    $('#sp-header').hide();
     $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
     $('#member-list > .member').css('height', '25vw');
     $('#team-detail').addClass('w-60').removeClass('w-95');
@@ -180,3 +198,14 @@ function resizeAddClass() {
     $('#birthplace').addClass('row-cols-8').removeClass('row-cols-4');
   }
 }
+
+$(document).ready(function() {
+  const hash = location.hash.slice(1);
+  if(hash !== "") {
+    let tabs = $('.tab');
+    $(".is-active").removeClass("is-active");
+    $(`#${hash}`).addClass("is-active");
+    const index = tabs.index($(`#${hash}`));
+    $(".tab-content > .tab-pane").removeClass("show active").eq(index).addClass("show active");
+  }
+})
