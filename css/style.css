@@ -133,15 +133,22 @@ transform: scale(1);
   height: 350px;
 }
 
+.bg-light {
+  background-color: #fff !important;
+  opacity: 0.85;
+}
+
 .bg-primary {
   background-color: #158bde !important;
 }
 
-/* 一旦ごめん */
+.text-primary {
+  color: #158bde !important;
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+}
+
 .img-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+  text-align: center;
 }
 
 .member {
@@ -192,6 +199,11 @@ transform: scale(1);
   font-size: 1.1vw;
 }
 
+.nav-link.active > p,.nav-link:hover > p {
+  height: 1.5vw;
+  font-size: 1.2vw;
+}
+
 .tab-en {
   font-size: 1vw;
 }
@@ -218,6 +230,56 @@ transform: scale(1);
   opacity: 1;
   transition: all 0.65s;
 }
+/******************************************************************************
+  member 
+*******************************************************************************/
+.font-s {
+  font-size: 1.4vw;
+}
+
+.sort-icon {
+  width: 2vw;
+}
+
+#border {
+  border-color: 2px #158bde;
+}
+
+.btn-primary {
+  color: #158bde;
+  background-color: #fff;
+  border-color: 1vw #158bde !important;
+}
+
+.border-primary {
+  border-color: #158bde !important;
+}
+
+.btn-check:hover+.btn-primary, .btn-primary:hover {
+  color: #fff !important;
+  background-color: #158bde !important;
+  border-color: #158bde !important;
+  box-shadow: none !important;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+  color: #fff !important;
+  background-color: #158bde !important;
+  border-color: #158bde !important;
+  box-shadow: none !important;
+}
+
+/* .team-image:first-child {
+  opacity: 0;
+} */
+
+/* .team:hover .team-image:first-child {
+  opacity: 1;
+} */
+
+/* .team:hover .team-image:nth-of-type(2) {
+  opacity: 0;
+} */
 
 /******************************************************************************
   member detail
@@ -260,9 +322,7 @@ transform: scale(1);
 .name-en{
   font-size: 3.4vw;
   font-weight: bold;
-  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
   line-height: 1.1;
-  color: #158bde;
   margin-bottom: 0vw;
 }
 
@@ -441,41 +501,8 @@ transform: scale(1);
   position: relative;
 }
 
-.team.left .go-details {
-  margin-top: 16vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8vw;
-  background: #158bde;
-  border-radius: 25vw;
-  height: 3.5vw;
-  position: absolute;
-  left: 25vw;
-  top: 3vw;
-}
-
-.team.right .go-details {
-  margin-top: 16vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8vw;
-  background: #158bde;
-  border-radius: 25vw;
-  height: 3.5vw;
-  position: absolute;
-  right: 7vw;
-  top: 2vw;
-}
-
-.go-image {
-  width: 2vw
-}
-
 .team-image {
   width: 36vw;
-  border-radius: 25vw;
 }
 
 .team.left .explaination {
@@ -778,9 +805,17 @@ dd.count-bl {
   flex-direction: row-reverse;
 }
 
+.color-gray{
+  color: gray;
+}
+
 /******************************************************************************
   header margin
 *******************************************************************************/
+.navbar{
+  top: 0;
+}
+
 .img-fluid{
   margin-top: 39px;
 }
@@ -789,10 +824,48 @@ dd.count-bl {
   .img-fluid{
     margin-top: 73px;
   }
+
+  .header-margin{
+    margin-top: 124px;
+  }
 }
 
 @media(max-width: 483px){
   .img-fluid{
     margin-top: 79px;
   }
+}
+
+/******************************************************************************
+  
+*******************************************************************************/
+.container-fluid {
+  height: 6vw;
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  height: 6vw;
+}
+
+a.navbar-brand {
+  margin-left: 1vw;
+}
+
+.nav-tabs .nav-item {
+  margin: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #158bde !important;
+  width: 9.5vw;
+}
+
+div.nav-link {
+  text-align: center;
+}
+
+div.nav-link > p {
+  margin-bottom: 0.5vw;
 }
