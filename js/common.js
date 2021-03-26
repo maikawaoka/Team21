@@ -171,6 +171,7 @@ function resizeAddClass() {
     $('#member-list > .member').css('height', '40vw');
     $('#team-detail').addClass('w-95').removeClass('w-60');
     $('.slider').css('width', '80%');
+    $('#birthplace').addClass('row-cols-4').removeClass('row-cols-8')
   } else {
     $('#member-list').addClass('row-cols-4 w-75').removeClass('row-cols-3 w-95');
     $('#member-list > .member').css('height', '25vw');
