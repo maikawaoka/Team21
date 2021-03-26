@@ -192,6 +192,7 @@ function resizeAddClass() {
     $('#member-list > .member').css('height', '40vw');
     $('#team-detail').addClass('w-95').removeClass('w-60');
     $('.slider').css('width', '80%');
+    $('#birthplace').addClass('row-cols-4').removeClass('row-cols-8');
   } else {
     $('#pc-header').show();
     $('#sp-header').hide();
@@ -199,5 +200,6 @@ function resizeAddClass() {
     $('#member-list > .member').css('height', '25vw');
     $('#team-detail').addClass('w-60').removeClass('w-95');
     $('.slider').css('width', '60%');
+    $('#birthplace').addClass('row-cols-8').removeClass('row-cols-4');
   }
 }
