@@ -15,37 +15,62 @@
     <title>内定者紹介サイト ｜ シアトルコンサルティング株式会社</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 w-100 position-fixed o-80 z-1000">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tabs" aria-controls="nav-tabs">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav-tabs">
-          <ul class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item" role="presentation">
-              <a href="../index.html#member" class="nav-link py-4 text-dark" id="nav-member-tab">メンバー紹介</a>
+    <header id="pc-header" class="tab-area">
+      <!-- tab -->
+      <span class="tab-title">SeattleConsulting 2021年度内定者紹介サイト</span>
+      <ul class="tab-group">
+        <li id="member" class="tab is-active">
+          <a href="../index.html#member">
+            <p>メンバー紹介</p>
+            <p class="tab-en">Member</p>
+          </a>
+        </li>
+        <li id="team" class="tab">
+          <a href="../index.html#team">
+            <p>チーム紹介</p>
+            <p class="tab-en">Team</p>
+          </a>
+        </li>
+        <li id="data" class="tab">
+          <a href="../index.html#data">
+            <p>21データ</p>
+            <p class="tab-en">Data</p>
+          </a>
+        </li>
+        <li id="tab4" class="tab">
+          <a href="https://www.seattleconsulting.co.jp/freshers/contact_input.php" class="go-details">
+            <p>エントリー</p>
+            <p class="tab-en">Entry</p>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div id="sp-header">
+      <div style="opacity: 0;"></div>
+      <div id="nav-menu" class="drawer">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer-check" class="drawer-open"><span></span></label>
+        <!-- メニュー -->
+        <nav class="drawer-content">
+          <ul class="drawer-list">
+            <li id="member" class="drawer-item">
+              <a href="../index.html#member">メンバー紹介</a>
             </li>
-            <li class="nav-item" role="presentation">
-              <a href="../index.html#team" class="nav-link py-4" id="nav-team-tab">チーム紹介</a>
+            <li id="team" class="drawer-item">
+              <a href="../index.html#team">チーム紹介</a>
             </li>
-            <li class="nav-item" role="presentation">
-              <a href="../index.html#data" class="nav-link py-4" id="nav-data-tab">21データ</a>
+            <li id="data" class="drawer-item">
+              <a href="../index.html#data">21データ</a>
+            </li>
+            <li id="entry" class="drawer-item">
+              <a href="">エントリー</a>
             </li>
           </ul>
-          <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
-        </div>
+        </nav>
       </div>
-    </nav>
-    <!-- <nav class="bg-light w-100 position-fixed o-80">
-      <div class="nav nav-tabs justify-content-end me-3" id="nav-tab" role="tablist">
-        <a href="../index.html" class="me-auto ms-3">SeattleConsulting 2021年度内定者紹介サイト</a>
-        <a href="../index.html#member" class="nav-link active py-4">メンバー紹介</a>
-        <a href="../index.html#team" class="nav-link py-4">チーム紹介</a>
-        <a href="../index.html#data" class="nav-link py-4">21データ</a>
-        <a href="#" class="py-4 border-0" id="nav-contact-tab">エントリー</a>
-      </div>
-    </!-->
+    </div>
     <div class="bg-primary">
       <img src="../../image/common/header.png" class="img-center img-fluid" alt="...">
     </div>
