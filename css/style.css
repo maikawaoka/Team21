@@ -1,13 +1,19 @@
-/* Loading Block */
+/******************************************************************************
+  loading
+*******************************************************************************/
 #loading {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   transition: all 1s;
   background-color: #158bde;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
+}
+.start {
+  animation: sk-scaleout 1.5s ease-in-out;
+  transform: scale(1.0);
 }
 .spinner {
   width: 100px;
@@ -21,9 +27,10 @@
 @keyframes sk-scaleout {
   0% {
     transform: scale(0);
-  } 100% {
+  } 
+  100% {
     transform: scale(1.0);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -148,7 +155,9 @@ transform: scale(1);
 }
 
 .img-center {
-  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .member {
@@ -812,6 +821,153 @@ dd.count-bl {
 /******************************************************************************
   header margin
 *******************************************************************************/
+.tab-area {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  top: 0;
+  position: fixed;
+  background: rgb(255, 255, 255, 0.8);
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+}
+
+.tab-area > .tab-group {
+  margin: 0;
+  display: flex;
+  height: 100%;
+}
+
+.tab-group > .tab {
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: none;
+  width: 11vw;
+  height: 100%;
+  padding: 0 2vw;
+  text-align: center;
+  list-style: none;
+}
+
+.tab p {
+  height: 50%;
+  margin: 0;
+  font-size: 1.1vw;
+}
+
+.tab-en {
+  font-size: 1vw;
+}
+
+#sp-header {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+  top: 0;
+  position: fixed;
+  background: rgb(255, 255, 255, 0.8);
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+}
+
+/*------------------------------
+
+  ここから下がハンバーガーメニュー
+  に関するCSS
+
+------------------------------*/
+  
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: rgb(255, 255, 255, 0.8);
+  transition: .5s;
+}
+
+.drawer-content > ul {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+.tab:nth-of-type(4) {
+  background: #F7F393;
+}
+
+.tab.is-active {
+  color: #158bde;
+  background: #FFF;
+}
+
 .navbar{
   top: 0;
 }
@@ -826,7 +982,7 @@ dd.count-bl {
   }
 
   .header-margin{
-    margin-top: 124px;
+    margin-top: 7vw;
   }
 }
 
