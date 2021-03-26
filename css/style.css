@@ -847,9 +847,13 @@ dd.count-bl {
   border-bottom: none;
   width: 11vw;
   height: 100%;
-  padding: 0 2vw;
   text-align: center;
   list-style: none;
+}
+
+.tab > a {
+  display: block;
+  height: 100%;
 }
 
 .tab p {
@@ -975,23 +979,7 @@ dd.count-bl {
 }
 
 .img-fluid{
-  margin-top: 39px;
-}
-
-@media(min-width: 992px){
-  .img-fluid{
-    margin-top: 73px;
-  }
-
-  .header-margin{
-    margin-top: 7vw;
-  }
-}
-
-@media(max-width: 483px){
-  .img-fluid{
-    margin-top: 79px;
-  }
+  margin-top: 7vw;
 }
 
 /******************************************************************************

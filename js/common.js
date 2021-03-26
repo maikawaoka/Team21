@@ -1,9 +1,4 @@
 $(function() {
-  setTimeout(() => {
-    const loading = document.getElementById('loading');
-    loading.classList.add('loaded');
-  }, 1500);
-
   resizeAddClass();
 
   /******************************************************************************
@@ -12,7 +7,7 @@ $(function() {
 
   let tabs = $(".tab"); // tabのクラスを全て取得し、変数tabsに配列で定義
   $(".tab").on("click", function() { // tabをクリックしたらイベント発火
-    if ($(this).attr('id') === 'tab4') return;
+    if ($(this).attr('id') === 'entry') return;
     $(".is-active").removeClass("is-active"); // activeクラスを消す
     $(this).addClass("is-active"); // クリックした箇所にactiveクラスを追加
     const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
@@ -203,3 +198,14 @@ function resizeAddClass() {
     $('#birthplace').addClass('row-cols-8').removeClass('row-cols-4');
   }
 }
+
+$(document).ready(function() {
+  const hash = location.hash.slice(1);
+  if(hash !== "") {
+    let tabs = $('.tab');
+    $(".is-active").removeClass("is-active");
+    $(`#${hash}`).addClass("is-active");
+    const index = tabs.index($(`#${hash}`));
+    $(".tab-content > .tab-pane").removeClass("show active").eq(index).addClass("show active");
+  }
+})
