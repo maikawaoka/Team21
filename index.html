@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="シアトルコンサルティング内定者紹介サイト2021" />
+    <meta name="keywords" content="シアトルコンサルティング,エンジニア,新卒,採用" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="image/common/favicon.png">
+
+    <title>内定者紹介サイト ｜ シアトルコンサルティング株式会社</title>
+  </head>
+  <body>
+    <div id="loading" class="d-flex-center">
+      <img src="image/common/header.png" class="start">
+    </div>
+    <div id="main-content">
+      <header id="pc-header" class="tab-area">
+        <!-- tab -->
+        <span class="tab-title">SeattleConsulting 2021年度内定者紹介サイト</span>
+        <ul class="tab-group">
+          <li id="member" class="tab is-active">
+            <p>メンバー紹介</p>
+            <p class="tab-en">Member</p>
+          </li>
+          <li id="team" class="tab">
+            <p>チーム紹介</p>
+            <p class="tab-en">Team</p>
+          </li>
+          <li id="data" class="tab">
+            <p>21データ</p>
+            <p class="tab-en">Data</p>
+          </li>
+          <li id="entry" class="tab">
+            <a href="https://www.seattleconsulting.co.jp/freshers/contact_input.php" class="go-details">
+              <p>エントリー</p>
+              <p class="tab-en">Entry</p>
+            </a>
+          </li>
+        </ul>
+      </header>
+      <div id="sp-header">
+        <div style="opacity: 0;"></div>
+        <div id="nav-menu" class="drawer">
+          <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+          <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+          <!-- ハンバーガーアイコン -->
+          <label for="drawer-check" class="drawer-open"><span></span></label>
+          <!-- メニュー -->
+          <nav class="drawer-content">
+            <ul class="drawer-list">
+              <li id="member" class="drawer-item">
+                <p>メンバー紹介</p>
+              </li>
+              <li id="team" class="drawer-item">
+                <p>チーム紹介</p>
+              </li>
+              <li id="data" class="drawer-item">
+                <p>21データ</p>
+              </li>
+              <li id="entry" class="drawer-item">
+                <a href="">エントリー</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="bg-primary">
+        <img src="image/common/header.png" class="img-fluid img-center" alt="...">
+      </div>
+      <p>「カウントアップ」クリックでカウントアップし、ブラウザを終了しない限り値を維持します。<br>
+        「リセット」クリックでcookieを削除します。</p>
+        <p>カウント:<span class="js-count-num"></span></p>
+        <button class="js-count-btn">カウントアップ</button><button class="js-reset-btn">リセット</button>
+      <div class="container tab-content mw-100 mt-5">
+        <div class="tab-pane fade show active" id="nav-member" role="tabpanel" aria-labelledby="nav-member-tab">
+          <div class="d-flex-center flex-column">
+            <h1 class="text-center my-3 text-primary">メンバー紹介</h1>
+            <h3 class="my-3">Team21のメンバー30人を紹介します！</h3>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary font-s rounded-pill border-primary text-primary" data-bs-toggle="modal" data-bs-target="#filterModal">
+              <img class="sort-icon" src="image/member/sort.png">
+              メンバーを絞り込む
+            </button>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close me-auto ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="modal-title text-center" id="filterModalLabel">メンバーを絞り込む</h5>
+                  <div class="bg-light font-p p-2 mb-3">出身</div>
+                  <div id="birthplace" class="row row-cols-8 mb-3 mx-1 tags">
+                    <button id="hokkaido" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      北海道
+                    </button>
+                    <button id="tohoku" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      東北
+                    </button>
+                    <button id="kanto" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      関東
+                    </button>
+                    <button id="chubu" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      中部
+                    </button>
+                    <button id="kinki" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      近畿
+                    </button>
+                    <button id="chugoku" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      中国
+                    </button>
+                    <button id="shikoku" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      四国
+                    </button>
+                    <button id="kyusyu" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      九州
+                    </button>
+                  </div>
+                  <div class="bg-light p-2 mb-3">文理</div>
+                  <div id="bunri" class="row row-cols-8 mb-3 mx-1 tags">
+                    <button id="bunkei" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      文系
+                    </button>
+                    <button id="rikei" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      理系
+                    </button>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                  <div class="bg-light p-2 mb-3">プログラミング経験</div>
+                  <div id="programing" class="row row-cols-8 mb-3 mx-1 tags">
+                    <button id="ari" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      あり
+                    </button>
+                    <button id="nashi" class="col d-flex-center border border-3 rounded-pill mx-2 py-1 bg-white">
+                      なし
+                    </button>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+                <div class="modal-footer mx-auto border-top-0">
+                  <button type="button" class="clear btn btn-secondary rounded-pill">条件をクリア</button>
+                  <button type="button" class="sort btn btn-primary rounded-pill" data-bs-dismiss="modal">該当メンバーを見る</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="member-list" class="filter-result row mx-auto my-5">
+            <div class="col d-flex-center member shikoku bunkei ari">
+              <a href="person/person01.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person1.png">
+                  <img src="image/member/hover-be/person1.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member shikoku rikei nashi">
+              <a href="person/person02.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person2.png">
+                  <img src="image/member/hover-be/person2.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person03.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person3.png">
+                  <img src="image/member/hover-be/person3.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kyusyu bunkei nashi">
+              <a href="person/person04.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person4.png">
+                  <img src="image/member/hover-be/person4.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person05.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person5.png">
+                  <img src="image/member/hover-be/person5.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member chubu bunkei nashi">
+              <a href="person/person06.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person6.png">
+                  <img src="image/member/hover-be/person6.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person07.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person7.png">
+                  <img src="image/member/hover-be/person7.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto rikei ari">
+              <a href="person/person08.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person8.png">
+                  <img src="image/member/hover-be/person8.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person09.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person9.png">
+                  <img src="image/member/hover-be/person9.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member tohoku bunkei nashi">
+              <a href="person/person10.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person10.png">
+                  <img src="image/member/hover-be/person10.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person11.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person11.png">
+                  <img src="image/member/hover-be/person11.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto rikei ari">
+              <a href="person/person12.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person12.png">
+                  <img src="image/member/hover-be/person12.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto rikei ari">
+              <a href="person/person13.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person13.png">
+                  <img src="image/member/hover-be/person13.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member tohoku bunkei nashi">
+              <a href="person/person14.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person14.png">
+                  <img src="image/member/hover-be/person14.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person15.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person15.png">
+                  <img src="image/member/hover-be/person15.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person16.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person16.png">
+                  <img src="image/member/hover-be/person16.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki rikei ari">
+              <a href="person/person17.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person17.png">
+                  <img src="image/member/hover-be/person17.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person18.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person18.png">
+                  <img src="image/member/hover-be/person18.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nshi">
+              <a href="person/person19.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person19.png">
+                  <img src="image/member/hover-be/person19.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person20.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person20.png">
+                  <img src="image/member/hover-be/person20.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member chubu bunkei nashi">
+              <a href="person/person21.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person21.png">
+                  <img src="image/member/hover-be/person21.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person22.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person22.png">
+                  <img src="image/member/hover-be/person22.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member chubu bunkei nashi">
+              <a href="person/person23.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person23.png">
+                  <img src="image/member/hover-be/person23.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person24.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person24.png">
+                  <img src="image/member/hover-be/person24.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person25.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person25.png">
+                  <img src="image/member/hover-be/person25.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person26.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person26.png">
+                  <img src="image/member/hover-be/person26.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person27.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person27.png">
+                  <img src="image/member/hover-be/person27.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kanto bunkei nashi">
+              <a href="person/person28.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person28.png">
+                  <img src="image/member/hover-be/person28.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member tohoku bunkei nashi">
+              <a href="person/person29.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person29.png">
+                  <img src="image/member/hover-be/person29.png">
+                </div>
+              </a>
+            </div>
+            <div class="col d-flex-center member kinki bunkei nashi">
+              <a href="person/person30.html">
+                <div class="person d-flex-center">
+                  <img src="image/member/hover-af/person30.png">
+                  <img src="image/member/hover-be/person30.png">
+                </div>
+              </a>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade mx-20vw my-5vw" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab">
+          <!-- チーム一覧書くところ -->
+          <div class="d-flex-center flex-column">
+            <h1 class="text-center my-3 text-primary">チーム紹介</h1>
+            <h3 class="my-3">Team21のメンバー30人を紹介します！</h3>
+            <div id="team-list">
+              <div class="team left">
+                <a href="team/team01.html">
+                  <img class="team-image" src="image/team/after/team_a_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_a.png"> -->                
+                </a>
+                <div class="explaination">
+                  <p class="team-name">西日本</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+              </div>
+              <div class="team right">
+                <div class="explaination">
+                  <p class="team-name">ぽんぽん本舗</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+                <a href="team/team02.html">
+                <img class="team-image" src="image/team/after/team_b_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_b.png"> -->
+                </a>
+              </div>
+              <div class="team left">
+                <a href="team/team03.html">
+                <img class="team-image" src="image/team/after/team_c_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_c.png"> -->             
+                </a>
+                <div class="explaination">
+                  <p class="team-name">Arcobaleno</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+              </div>
+              <div class="team right">
+                <div class="explaination">
+                  <p class="team-name">Blueocean</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+                <a href="team/team04.html">
+                <img class="team-image" src="image/team/after/team_d_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_d.png"> -->               
+                </a>
+              </div>
+              <div class="team left">
+                <a href="team/team05.html">
+                <img class="team-image" src="image/team/after/team_e_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_e.png"> -->              
+                </a>
+                <div class="explaination">
+                  <p class="team-name">きらきら星</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+              </div>
+              <div class="team right">
+                <div class="explaination">
+                  <p class="team-name">世界進出</p>
+                  <p class="description">△△で〇〇なチームです！</p>
+                </div>
+                <a href="team/team06.html">
+                <img class="team-image" src="image/team/after/team_f_after.png">
+                <!-- <img class="team-image" src="image/team/before/team_f.png"> -->              
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+          <div class="d-flex-center flex-column">
+            <h1 class="text-center my-3 text-primary">Team21Data</h1>
+            <h3 class="my-3">今年の内定者チームの情報です。</h3>
+          </div>
+          <!-- grid使う -->
+          <div class="content mb-10vw">
+            <div class="grid">
+              <div class="grid-container1">
+                <div class="grid-panel">
+                  <div class="grid-title">出身</div>
+                  <div class="grid-contents">
+                    <img src="image/data/birthplace.svg">
+                    <span class="count">
+                      <dl>
+                        <dt>東北</dt>
+                        <dd>3人</dd>
+                      </dl>
+                      <dl>
+                        <dt>関東</dt>
+                        <dd>13人</dd>
+                      </dl>
+                      <dl>
+                        <dt>中部</dt>
+                        <dd>3人</dd>
+                      </dl>
+                      <dl>
+                        <dt>近畿</dt>
+                        <dd>8人</dd>
+                      </dl>
+                      <dl>
+                        <dt>四国</dt>
+                        <dd>2人</dd>
+                      </dl>
+                      <dl>
+                        <dt>九州</dt>
+                        <dd>1人</dd>
+                      </dl>
+                    </span>
+                  </div>
+                  <div class="comment">日本全国からいろんな方が集まっています。</div>
+                </div>
+              </div>
+              <div class="grid-container2">
+                <div class="grid-panel">
+                  <div class="grid-title">文理</div>
+                  <div class="grid-contents">
+                    <img src="image/data/bunri.svg">
+                    <span class="count count2-4">
+                      <dl>
+                        <dt>文系</dt>
+                        <dd class="count-bl">25<span class="smallChar">人</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>理系</dt>
+                        <dd class="count-bl">5<span class="smallChar">人</span></dd>
+                      </dl>
+                    </span>
+                  </div>
+                  <div class="comment">エンジニアは理系のイメージが強いと思いますが、<br>シアトルは文系出身も多く入社します！</div>
+                </div>
+              </div>
+              <div class="grid-container3">
+                <div class="grid-panel">
+                  <div class="grid-title">プログラミング経験</div>
+                  <div class="grid-contents">
+                    <img src="image/data/programing.svg">
+                    <span class="count count2-4">
+                      <dl>
+                        <dt>あり</dt>
+                        <dd class="count-bl">&nbsp;5<span class="smallChar">人</span></dd>
+                      </dl>
+                      <dl>
+                        <dt>なし</dt>
+                        <dd class="count-bl">25<span class="smallChar">人</span></dd>
+                      </dl>
+                    </span>
+                  </div>
+                  <div class="comment">ほとんどが未経験のメンバーです！<br>一緒に成長していこう！</div>
+                </div>
+              </div>
+              <div class="grid-container4">
+                <div class="grid-panel">
+                  <div class="grid-title">男女比</div>
+                  <div class="grid-contents">
+                    <img src="image/data/danjo.svg">
+                    <span class="count count2-4">
+                      <dl>
+                        <dt>男性</dt>
+                        <dd class="count-bl">13<span class="smallChar">人</span></dd>
+                      </dl>
+                      <dl>
+                        <dt class="count-bl">女性</dt>
+                        <dd class="count-bl">17<span class="smallChar">人</span></dd>
+                      </dl>
+                    </span>
+                  </div>
+                  <div class="comment">男女比は4:6です。<br>今年は女性が多いですね！</div>
+                </div>
+              </div>
+              <div class="grid-container5">
+                <div class="grid-panel">
+                  <div class="grid-title">内定者出身校一覧<span class="grid-sub-title">(五十音順)</span></div>  
+                  <table class="alma-mater">
+                    <tbody>
+                      <tr>
+                        <td>青森県立保健大学</td>
+                        <td>岡山大学</td>
+                        <td>尾道市立大学</td>
+                      </tr>
+                      <tr>
+                        <td>関西学院大学</td>
+                        <td>京都産業大学</td>
+                        <td>共立女子大学</td>
+                      </tr>
+                      <tr>
+                        <td>近畿大学</td>
+                        <td>産業能率大学</td>
+                        <td>順天堂大学</td>
+                      </tr>
+                      <tr>
+                        <td>駿河台大学</td>
+                        <td>拓殖大学</td>
+                        <td>中国学園大学</td>
+                      </tr>
+                      <tr>
+                        <td>東京女子体育大学</td>
+                        <td>東京女子大学</td>
+                        <td>東京農工大学</td>
+                      </tr>
+                      <tr>
+                        <td>同志社大学</td>
+                        <td>東洋大学</td>
+                        <td>長崎大学</td>
+                      </tr>
+                      <tr>
+                        <td>新居浜工業高等専門学校</td>
+                        <td>日本女子大学</td>
+                        <td>日本大学</td>
+                      </tr>
+                      <tr>
+                        <td>船橋情報ビジネス専門学校</td>
+                        <td>法政大学</td>
+                        <td>松山大学</td>
+                      </tr>
+                      <tr>
+                        <td>武蔵野大学</td>
+                        <td>目白大学</td>
+                        <td>立命館大学</td>
+                      </tr>
+                      <tr>
+                        <td>琉球大学</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="grid-contents6">
+                <img class="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="arrow-up">
+        <img class ="arrow-up-img" src="image/common/arrow_up.png">
+      </a>
+      <footer class="bg-primary py-5 text-center text-light">Copyright © 2021 Team20. All Rights Reserved.</footer>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    $(function(){
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        loading.classList.add('loaded');
+      }, 1500);
+
+      // // 1回目のアクセス
+      // if($.cookie("access") == undefined) {
+      //   //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
+      //   $.cookie("access","onece");
+      //   $("#loading").css("display","block")
+      //   // 2回目以降は動かないようにするけど最初は動かす
+      // } else {
+      //   $("#loading").css("display","none")
+      // }
+      var cookie = $.cookie('cookie');    
+      if(cookie){
+        $('.js-count-num').text(cookie);
+      }
+      else{
+        $('.js-count-num').text(0);
+      }
+      var count = $('.js-count-num').text();
+      $('.js-count-btn').on('click',function(){
+        count++;
+        $.cookie( "cookie",count);
+        $('.js-count-num').text(count);
+      });
+      $('.js-reset-btn').on('click',function(){
+        count = 0;
+        $.removeCookie( "cookie");
+        $('.js-count-num').text(count);
+      });
+    });
+    </script>
+  </body>
+</html>
