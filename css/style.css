@@ -151,6 +151,10 @@ transform: scale(1);
   background-color: #158bde !important;
 }
 
+.font-primary {
+  font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
+}
+
 .text-primary {
   color: #158bde !important;
   font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
@@ -224,13 +228,29 @@ transform: scale(1);
   justify-content: center;
   align-items: center;
   padding: 0.8vw;
-  border: 3px solid #158bde;
+  border: 1vw solid #158bde;
   border-radius: 25vw;
   position: fixed;
-  bottom: 8vw;
+  bottom: 10vw;
   right: 2vw;
   opacity: 0;
   transition: all 0.65s;
+}
+
+@media(max-width: 768px) {
+  .arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8vw;
+    border: 0.5vw solid #158bde;
+    border-radius: 25vw;
+    position: fixed;
+    bottom: 16vw;
+    right: 2vw;
+    opacity: 0;
+    transition: all 0.65s;
+  }
 }
 
 .arrow-up-img {
@@ -241,6 +261,23 @@ transform: scale(1);
   opacity: 1;
   transition: all 0.65s;
 }
+
+.footer {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+@media(max-width: 768px) {
+  .footer {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
+
+.font-xs {
+  font-size: 1vw;
+}
+
 /******************************************************************************
   member 
 *******************************************************************************/
@@ -267,16 +304,16 @@ transform: scale(1);
 }
 
 .btn-check:hover+.btn-primary, .btn-primary:hover {
-  color: #fff !important;
-  background-color: #158bde !important;
-  border-color: #158bde !important;
+  color: #158bde;
+  background-color: #fff;
+  border-color: 1vw #158bde !important;
   box-shadow: none !important;
 }
 
 .btn-check:focus+.btn-primary, .btn-primary:focus {
-  color: #fff !important;
-  background-color: #158bde !important;
-  border-color: #158bde !important;
+  color: #158bde;
+  background-color: #fff;
+  border-color: 1vw #158bde !important;
   box-shadow: none !important;
 }
 
@@ -1028,6 +1065,11 @@ div.nav-link > p {
 .modal-dialog{
   max-width: 794px;
 }
+
+.modal {
+  border-radius: 1.2vw !important;
+}
+
 
 @media(max-width: 768px){
   #birthplace button{
