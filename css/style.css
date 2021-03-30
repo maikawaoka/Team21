@@ -333,7 +333,7 @@ a {
   border-color: 1vw #158bde !important;
   box-shadow: none !important;
 }
-
+/* 
 .team-hover {
   position: relative;
   overflow: hidden;
@@ -360,7 +360,7 @@ a {
 .team-hover:hover img:nth-of-type(2) {
   width: 80%;
   opacity: 0;
-}
+} */
 
 /******************************************************************************
   member detail
