@@ -95,6 +95,7 @@ transform: scale(1);
 *******************************************************************************/
 a {
   text-decoration: none;
+  outline: none;
 }
 
 .d-flex-center {
