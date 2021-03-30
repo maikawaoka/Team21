@@ -245,7 +245,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0.8vw;
-  border: 0.5vw solid #158bde;
+  border: 0.3vw solid #158bde;
   border-radius: 25vw;
   position: fixed;
   bottom: 10vw;
@@ -334,17 +334,33 @@ a {
   box-shadow: none !important;
 }
 
-/* .team-image:first-child {
-  opacity: 0;
-} */
+.team-hover {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-/* .team:hover .team-image:first-child {
+.team-hover img {
+  width: 40vw;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: block;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+
+.team-hover img:first-child {
+  opacity: 0;
+}
+.team-hover:hover img:first-child {
+  width: 100%;
   opacity: 1;
-} */
+}
 
-/* .team:hover .team-image:nth-of-type(2) {
+.team-hover:hover img:nth-of-type(2) {
+  width: 80%;
   opacity: 0;
-} */
+}
 
 /******************************************************************************
   member detail
@@ -586,8 +602,12 @@ a {
   height: 10vw;
 }
 
+.team-title {
+  color: #158bde;
+}
+
 .team-name {
-  font-size: 1.6vw;
+  font-size: 2vw;
   color: #158bde;
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
 }
@@ -610,7 +630,8 @@ a {
 
 .h-font {
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
-  font-size: 2vw;
+  font-size: 1.8vw;
+  color: #393939;
 }
 
 .grid {
