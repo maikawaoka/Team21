@@ -866,6 +866,20 @@ dd.count-bl {
   width: 50vw;
 }
 
+#team-detail h1{
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.question h3{
+  color: #158bde;
+}
+
+.txbox p{
+  text-align: center;
+}
+
 /******************************************************************************
   header margin
 *******************************************************************************/
