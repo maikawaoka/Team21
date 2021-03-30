@@ -270,6 +270,10 @@ a {
   }
 }
 
+.mt-06 {
+  margin-bottom: 0.6vw !important;
+}
+
 .arrow-up-img {
   width: 1.8vw;
 }
