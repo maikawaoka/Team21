@@ -903,7 +903,7 @@ dd.count-bl {
 *******************************************************************************/
 .tab-area {
   width: 100%;
-  height: 7vw;
+  height: 5vw;
   display: flex;
   justify-content: space-between;
   z-index: 100;
@@ -917,7 +917,7 @@ dd.count-bl {
 .tab-title {
   position: relative;
   justify-content: center;
-  line-height: 7vw;
+  line-height: 5vw;
   cursor: pointer;
   border-bottom: none;
   padding-left: 2vw;
@@ -931,7 +931,12 @@ dd.count-bl {
 }
 
 .tab-group > .tab {
-  justify-content: center;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-flow: column;
+  -ms-flex-pack:distribute;
+  justify-content:space-around;
   cursor: pointer;
   border-bottom: none;
   width: 11vw;
@@ -941,12 +946,16 @@ dd.count-bl {
 }
 
 .tab > a {
-  display: block;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-flow: column;
+  -ms-flex-pack:distribute;
+  justify-content:space-around;
   height: 100%;
 }
 
 .tab p {
-  height: 50%;
   margin: 0;
   font-size: 1.1vw;
   color: #158bde !important;
@@ -958,7 +967,7 @@ dd.count-bl {
 
 #sp-header {
   width: 100%;
-  height: 7vw;
+  height: 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1064,12 +1073,16 @@ dd.count-bl {
   background: #FFF;
 }
 
+.tab.is-active  > p,.tab:hover > p {
+  font-size: 1.2vw;
+}
+
 .navbar{
   top: 0;
 }
 
 .img-fluid{
-  margin-top: 7vw;
+  margin-top: 5vw;
 }
 
 /******************************************************************************
