@@ -11,10 +11,19 @@
   left: 0;
   z-index: 9999;
 }
+
 .start {
   animation: sk-scaleout 1.5s ease-in-out;
   transform: scale(1.0);
 }
+
+/* @media(max-width: 768px) {
+  .start {
+    animation: sk-scaleout 1.5s ease-in-out;
+    transform: scale(1.0);
+  }
+} */
+
 .spinner {
   width: 100px;
   height: 100px;
@@ -232,7 +241,7 @@ transform: scale(1);
   justify-content: center;
   align-items: center;
   padding: 0.8vw;
-  border: 1vw solid #158bde;
+  border: 0.5vw solid #158bde;
   border-radius: 25vw;
   position: fixed;
   bottom: 10vw;
@@ -593,11 +602,11 @@ transform: scale(1);
 *******************************************************************************/
 #nav-data h1{
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
-  font-size: 3vw;
 }
 
-#nav-data h3{
-  font-size: 1.1vw;
+.h-font {
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+  font-size: 2vw;
 }
 
 .grid {
@@ -847,6 +856,11 @@ dd.count-bl {
 .txbox > img {
   width: 100%;
 }
+
+.txbox > p {
+  margin-top: 0.6vw;
+}
+
 
 .txbox:nth-of-type(even) {
   flex-grow: 2;
