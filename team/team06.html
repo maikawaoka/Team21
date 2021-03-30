@@ -16,35 +16,69 @@
     <title>内定者紹介サイト ｜ シアトルコンサルティング株式会社</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-0 w-100 position-fixed o-80 z-1000">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">SeattleConsulting 2021年度内定者紹介サイト</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tabs" aria-controls="nav-tabs">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav-tabs">
-          <ul id="detail-tabs" class="nav nav-tabs navbar-nav ms-auto mb-2 mb-lg-0">
-            <li id="member" class="nav-item" role="presentation">
-              <a href="../index.html#member" class="nav-link py-4" id="nav-member-tab">メンバー紹介</a>
+    <header id="pc-header" class="tab-area">
+      <!-- tab -->
+      <span class="tab-title">SeattleConsulting 2021年度内定者紹介サイト</span>
+      <ul class="tab-group">
+        <li id="member" class="tab is-active">
+          <a href="../index.html#member">
+            <p>メンバー紹介</p>
+            <p class="tab-en">Member</p>
+          </a>
+        </li>
+        <li id="team" class="tab">
+          <a href="../index.html#team">
+            <p>チーム紹介</p>
+            <p class="tab-en">Team</p>
+          </a>
+        </li>
+        <li id="data" class="tab">
+          <a href="../index.html#data">
+            <p>21データ</p>
+            <p class="tab-en">Data</p>
+          </a>
+        </li>
+        <li id="entry" class="tab">
+          <a href="https://www.seattleconsulting.co.jp/freshers/contact_input.php" class="go-details">
+            <p>エントリー</p>
+            <p class="tab-en">Entry</p>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div id="sp-header">
+      <div style="opacity: 0;"></div>
+      <div id="nav-menu" class="drawer">
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer-check" class="drawer-open"><span></span></label>
+        <!-- メニュー -->
+        <nav class="drawer-content">
+          <ul class="drawer-list">
+            <li id="member" class="drawer-item">
+              <a href="../index.html#member">メンバー紹介</a>
             </li>
-            <li id="team" class="nav-item" role="presentation">
-              <a href="../index.html#team" class="nav-link py-4 active" id="nav-team-tab">チーム紹介</a>
+            <li id="team" class="drawer-item">
+              <a href="../index.html#team">チーム紹介</a>
             </li>
-            <li id="data" class="nav-item" role="presentation">
-              <a href="../index.html#data" class="nav-link py-4" id="nav-data-tab">21データ</a>
+            <li id="data" class="drawer-item">
+              <a href="../index.html#data">21データ</a>
+            </li>
+            <li id="entry" class="drawer-item">
+              <a href="">エントリー</a>
             </li>
           </ul>
-          <button class="py-4 border-0" id="nav-contact-tab">エントリー</button>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </div>
     <div class="bg-primary">
       <img src="../image/common/header.png" class="img-center img-fluid" alt="...">
     </div>
-    <div class="container tab-content w-60 mt-5 mx-auto mb-10vw">
+    <div id="team-detail" class="container tab-content w-60 mt-5 mx-auto mb-10vw">
       <h1 class="text-center">世界進出</h1>
       <div class="d-flex-center">
-        <img src="../image/team-a.png">
+        <img src="../image/team/detail/team_f.png">
       </div>
       <h3 class="text-center">Member</h3>
       <div class="d-flex w-80 h-350px mx-auto">
@@ -440,28 +474,29 @@
       <h5 class="text-center mt-4">他のチームを見る</h5>
       <section class="team center slider">
         <div>
-          <img src="../image/team-a.png">
+          <a href="team02.html">
+            <img src="../image/team/detail/team_b.png">
+          </a>
         </div>
         <div>
-          <img src="../image/team-a.png">
+          <a href="team03.html">
+            <img src="../image/team/detail/team_c.png">
+          </a>
         </div>
         <div>
-          <img src="../image/team-a.png">
+          <a href="team04.html">
+            <img src="../image/team/detail/team_d.png">
+          </a>
         </div>
         <div>
-          <img src="../image/team-a.png">
+          <a href="team05.html">
+            <img src="../image/team/detail/team_e.png">
+          </a>
         </div>
         <div>
-          <img src="../image/team-a.png">
-        </div>
-        <div>
-          <img src="../image/team-a.png">
-        </div>
-        <div>
-          <img src="../image/team-a.png">
-        </div>
-        <div>
-          <img src="../image/team-a.png">
+          <a href="team06.html">
+            <img src="../image/team/detail/team_f.png">
+          </a>
         </div>
       </section>
     </div>
