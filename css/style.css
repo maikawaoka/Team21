@@ -90,6 +90,10 @@ transform: scale(1);
   align-items: center !important;
 }
 
+.link-none {
+  pointer-events:none !important;
+}
+
 .d-none {
   display: none !important;
 }
