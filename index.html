@@ -80,10 +80,6 @@
         </svg>
         
       </div>
-      <p>「カウントアップ」クリックでカウントアップし、ブラウザを終了しない限り値を維持します。<br>
-        「リセット」クリックでcookieを削除します。</p>
-        <p>カウント:<span class="js-count-num"></span></p>
-        <button class="js-count-btn">カウントアップ</button><button class="js-reset-btn">リセット</button>
       <div class="container tab-content mw-100 mt-5">
         <div class="tab-pane fade show active" id="nav-member" role="tabpanel" aria-labelledby="nav-member-tab">
           <div class="d-flex-center flex-column">
@@ -665,38 +661,17 @@
     <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
     <script>
     $(function(){
-      setTimeout(() => {
-        const loading = document.getElementById('loading');
-        loading.classList.add('loaded');
-      }, 1500);
-
-      // // 1回目のアクセス
-      // if($.cookie("access") == undefined) {
-      //   //最初にアクセスしたときにはここに書いたアニメーションのJSが動く
-      //   $.cookie("access","onece");
-      //   $("#loading").css("display","block")
-      //   // 2回目以降は動かないようにするけど最初は動かす
-      // } else {
-      //   $("#loading").css("display","none")
-      // }
       var cookie = $.cookie('cookie');    
       if(cookie){
-        $('.js-count-num').text(cookie);
+        $('#loading').hide();
       }
       else{
-        $('.js-count-num').text(0);
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          loading.classList.add('loaded');
+        }, 1500);
+        $.cookie("cookie", "login");
       }
-      var count = $('.js-count-num').text();
-      $('.js-count-btn').on('click',function(){
-        count++;
-        $.cookie( "cookie",count);
-        $('.js-count-num').text(count);
-      });
-      $('.js-reset-btn').on('click',function(){
-        count = 0;
-        $.removeCookie( "cookie");
-        $('.js-count-num').text(count);
-      });
     });
     </script>
   </body>
