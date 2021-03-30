@@ -270,6 +270,10 @@ a {
   }
 }
 
+.mt-06 {
+  margin-bottom: 0.6vw !important;
+}
+
 .arrow-up-img {
   width: 1.8vw;
 }
@@ -440,6 +444,10 @@ a {
 
 .detail-content{
   margin-bottom: 10vw;
+}
+
+.detail-content > .content-title > h2 {
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
 }
 
 .content-title{
