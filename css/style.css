@@ -442,6 +442,10 @@ a {
   margin-bottom: 10vw;
 }
 
+.detail-content > .content-title > h2 {
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+}
+
 .content-title{
   justify-content: center;
   align-items: center;
