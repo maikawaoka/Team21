@@ -84,6 +84,10 @@ transform: scale(1);
 /******************************************************************************
   common
 *******************************************************************************/
+a {
+  text-decoration: none;
+}
+
 .d-flex-center {
   display: flex !important;
   justify-content: center !important;
@@ -866,10 +870,6 @@ dd.count-bl {
   text-align: center;
 }
 
-.team-detail-image img{
-  width: 50vw;
-}
-
 #team-detail h1{
   display: table;
   margin-right: auto;
@@ -885,7 +885,7 @@ dd.count-bl {
 }
 
 /******************************************************************************
-  header margin
+  header
 *******************************************************************************/
 .tab-area {
   width: 100%;
@@ -895,8 +895,19 @@ dd.count-bl {
   z-index: 100;
   top: 0;
   position: fixed;
-  background: rgb(255, 255, 255, 0.8);
+  background: rgba(85.9%, 92.9%, 98%, 0.8);
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+  color: #158bde !important;
+}
+
+.tab-title {
+  position: relative;
+  justify-content: center;
+  line-height: 7vw;
+  cursor: pointer;
+  border-bottom: none;
+  padding-left: 2vw;
+  color: #158bde !important;
 }
 
 .tab-area > .tab-group {
@@ -924,6 +935,7 @@ dd.count-bl {
   height: 50%;
   margin: 0;
   font-size: 1.1vw;
+  color: #158bde !important;
 }
 
 .tab-en {
@@ -936,7 +948,7 @@ dd.count-bl {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1vw;
   z-index: 100;
   top: 0;
   position: fixed;
