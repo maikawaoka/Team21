@@ -312,7 +312,7 @@ a {
 }
 
 #border {
-  border-color: 2px #158bde;
+  border-color: 0.3vw #158bde;
 }
 
 .btn-primary {
@@ -338,32 +338,16 @@ a {
   border-color: 1vw #158bde !important;
   box-shadow: none !important;
 }
-/* 
-.team-hover {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
 
-.team-hover img {
-  width: 40vw;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	display: block;
-	-webkit-transition: .4s ease-in-out;
-	transition: .4s ease-in-out;
-}
-
-.team-hover img:first-child {
+/* .team-image:first-child {
   opacity: 0;
-}
-.team-hover:hover img:first-child {
-  width: 100%;
-  opacity: 1;
-}
+} */
 
-.team-hover:hover img:nth-of-type(2) {
-  width: 80%;
+/* .team:hover .team-image:first-child {
+  opacity: 1;
+} */
+
+/* .team:hover .team-image:nth-of-type(2) {
   opacity: 0;
 } */
 
@@ -932,7 +916,7 @@ dd.count-bl {
   font-size: 1.5vw;
 }
 /******************************************************************************
-  header
+  header margin
 *******************************************************************************/
 .tab-area {
   width: 100%;
@@ -1160,8 +1144,8 @@ div.nav-link > p {
   max-width: 794px;
 }
 
-.modal {
-  border-radius: 1.2vw !important;
+.modal-content {
+  border: 1vw #158bde !important;
 }
 
 
