@@ -169,6 +169,10 @@ a {
   background-color: #158bde !important;
 }
 
+.header-height {
+  height: 100%;
+}
+
 .font-primary {
   font-family: 'ヒラギノ丸ゴ ProN',sans-serif;
 }
@@ -256,6 +260,15 @@ a {
 }
 
 @media(max-width: 768px) {
+  .my-3 {
+    margin-top: 1vw !important;
+    margin-bottom: 1vw !important;
+  }
+
+  .img-fluid {
+    height: 20vh !important;
+}
+
   .arrow-up {
     display: flex;
     justify-content: center;
@@ -271,10 +284,6 @@ a {
   }
 }
 
-.mt-06 {
-  margin-bottom: 0.6vw !important;
-}
-
 .arrow-up-img {
   width: 1.8vw;
 }
@@ -284,15 +293,20 @@ a {
   transition: all 0.65s;
 }
 
-.footer {
-  padding-top: 3vw;
-  padding-bottom: 3vw;
+.footer-height {
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  line-height: 1vh;
+  height: 15vh;
 }
 
 @media(max-width: 768px) {
-  .footer {
-    padding-top: 5vw;
-    padding-bottom: 5vw;
+  .footer-height {
+    padding-top: 3vh !important;
+    padding-bottom: 3vh !important;
+    font-size: 2vw !important;
+    line-height: 0 !important;
+    height: 0 !important;
   }
 }
 
@@ -312,7 +326,7 @@ a {
 }
 
 #border {
-  border-color: 0.3vw #158bde;
+  border-color: 2px #158bde;
 }
 
 .btn-primary {
@@ -339,17 +353,47 @@ a {
   box-shadow: none !important;
 }
 
-/* .team-image:first-child {
-  opacity: 0;
-} */
+.team > a {
+  width: 40vw;
+}
 
-/* .team:hover .team-image:first-child {
+.team-hover {
+  position: relative;
+	width: 100%;
+	height: 110%;
+	border-radius: 12px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.team-hover img {
+  width: 40vw;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	display: block;
+	-webkit-transition: .4s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+.team-hover img:first-child {
+  width: 20vw;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.team-hover:hover img:first-child {
+  width: 40vw;
   opacity: 1;
-} */
+  transition: 0.5s ease-in-out;
+}
 
-/* .team:hover .team-image:nth-of-type(2) {
+.team-hover:hover img:nth-of-type(2) {
+  width: 0;
   opacity: 0;
-} */
+  transition: 0.5s ease-in-out;
+}
 
 /******************************************************************************
   member detail
@@ -431,18 +475,21 @@ a {
   margin-bottom: 10vw;
 }
 
-.detail-content > .content-title > h2 {
-  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
-}
-
 .content-title{
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
+.content-title {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 .content-title img{
   width: 5vw;
+  margin-right: 2vw;
 }
 
 .content-title h2{
@@ -469,6 +516,14 @@ a {
 }
 
 @media screen and (max-width:599px){
+  .sort {
+    margin: 3vw 0;
+  }
+
+  .sort-icon {
+    width: 5vw;
+  }
+
   .member-detail{
     width: 90vw;
   }
@@ -502,7 +557,8 @@ a {
   }
   
   .content-title h2{
-    font-size: 3.2vw;
+    font-size: 4.2vw;
+    margin-left: 1vw;
   }
 
   .detail-content h3{
@@ -519,6 +575,7 @@ a {
 }
 
 @media screen and (min-width:600px) and (max-width:1024px){
+
   .member-detail{
     width: 65vw;
   }
@@ -573,26 +630,21 @@ a {
 .team {
   display: flex;
   position: relative;
+  height: 24vw;
 }
 
-.team-image {
-  width: 36vw;
-}
+/* .team-image {
+  width: 36vw; */
+/* } */
 
 .team.left .explaination {
   width: 30vw;
   margin-right: 6vw;
-  padding-top: 15vw;
-  text-align: center;
-  height: 10vw;
 }
 
 .team.right .explaination {
   width: 30vw;
   margin-left: 6vw;
-  padding-top: 15vw;
-  text-align: center;
-  height: 10vw;
 }
 
 .team-title {
@@ -698,6 +750,32 @@ a {
   width: 12vw;
   margin-left: 2vw;
   margin-right: 2vw;
+}
+
+/* data  */
+@media screen and (max-width: 768px) {
+  .grid-contents > img {
+    width: 31vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .grid-contents {
+    justify-content: center;
+    align-items: center;
+    height: 39vw;
+  }
+
+  .grid-panel {
+    padding: 1.5vw;
+    height: 64vw;
+  }
+
+  .grid-title {
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
 }
 
 .count {
@@ -877,6 +955,7 @@ dd.count-bl {
 
 .txbox > p {
   margin-top: 0.6vw;
+  font-size: 1.3vw;
 }
 
 
@@ -887,6 +966,36 @@ dd.count-bl {
 
 .answer-box:nth-child(odd) {
   flex-direction: row-reverse;
+}
+
+.answer-box > .img-text-center > p {
+  margin-top: 0.6vw;
+  font-size: 1.1vw;
+  margin-bottom: 0;
+}
+
+@media(max-width: 575px) {
+  .answer-box > .img-text-center > p {
+    margin-top: 1.5vw;
+    font-size: 4vw !important;
+  }
+
+  .question {
+    margin-bottom: 26vw;
+  }
+
+  .question h3 {
+    font-size: 5vw !important;
+  }
+
+  .answer-box {
+    margin: 19vw 0 !important;
+  }
+
+  .img-text-center p {
+    font-size: 4vw !important;
+    margin-top: 1.5vw;
+}
 }
 
 .color-gray{
@@ -916,7 +1025,7 @@ dd.count-bl {
   font-size: 1.5vw;
 }
 /******************************************************************************
-  header margin
+  header
 *******************************************************************************/
 .tab-area {
   width: 100%;
@@ -984,7 +1093,7 @@ dd.count-bl {
 
 #sp-header {
   width: 100%;
-  height: 5vw;
+  height: 5vh !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -992,7 +1101,7 @@ dd.count-bl {
   z-index: 100;
   top: 0;
   position: fixed;
-  background: rgb(255, 255, 255, 0.8);
+  background: rgba(85.9%, 92.9%, 98%, 0.8);
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
 }
 
@@ -1011,8 +1120,10 @@ dd.count-bl {
 /* ハンバーガーアイコンの設置スペース */
 .drawer-open {
   display: flex;
-  height: 60px;
-  width: 60px;
+  height: 3vh !important;
+  width: 3vw !important;
+  margin-right: 2.5vw;
+  margin-top: 0vw;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1028,8 +1139,8 @@ dd.count-bl {
   display: block;
   height: 3px;
   width: 25px;
-  border-radius: 3px;
-  background: #333;
+  border-radius: 2vw;
+  background: #158bde;
   transition: 0.5s;
   position: absolute;
 }
@@ -1072,6 +1183,25 @@ dd.count-bl {
   transition: .5s;
 }
 
+
+
+@media(max-width: 414px){
+  .drawer-list {
+    text-align: center !important;
+    margin: 25vw;
+  }
+  
+  .drawer-list > li {
+    padding-bottom: 3vh;
+    color: #158bde !important;
+  }
+  
+  .drawer-list > .drawer-item > a {
+    color: #158bde !important;
+    font-size: 4.5vw !important;
+  }
+}
+
 .drawer-content > ul {
   list-style: none;
 }
@@ -1094,12 +1224,17 @@ dd.count-bl {
   font-size: 1.2vw;
 }
 
+/* これじゃあかん？ */
+.tab:hover > a > p {
+  font-size: 1.2vw;
+}
+
 .navbar{
   top: 0;
 }
 
-.img-fluid{
-  margin-top: 5vw;
+.img-fluid {
+  height: 40vh;
 }
 
 /******************************************************************************
@@ -1144,8 +1279,8 @@ div.nav-link > p {
   max-width: 794px;
 }
 
-.modal-content {
-  border: 1vw #158bde !important;
+.modal {
+  border-radius: 1.2vw !important;
 }
 
 
