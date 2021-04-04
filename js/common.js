@@ -104,19 +104,27 @@ $(function() {
   /******************************************************************************
     slider
   *******************************************************************************/
+  var getLocation = location.pathname;
+  console.log(getLocation);
+  var getString = getLocation.slice(-7);
+  console.log(getString);
+  debugger
+  var currentLocation = getString.replace(/[^0-9]/g, '');
+  console.log(currentLocation);
+  
   var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    initialSlide: currentLocation + 1
   });
 
-  $('#nav-member-tab').click(function () {
-    memberSlider.css('opacity',0);
-    memberSlider.animate({'z-index':1},300,function(){
-      memberSlider.slick('setPosition');
-      memberSlider.animate({'opacity':1});
-    });
+  memberSlider.css('opacity',0);
+  memberSlider.animate({'z-index':1},300,function(){
+    memberSlider.slick('setPosition');
+    memberSlider.slick('slickRemove', currentLocation);
+    memberSlider.animate({'opacity':1});
   });
 
   var teamSlider = $(".team.center").slick({
@@ -126,12 +134,10 @@ $(function() {
     slidesToScroll: 1
   });
 
-  $('#nav-team-tab').click(function () {
-    teamSlider.css('opacity',0);
-    teamSlider.animate({'z-index':1},300,function(){
-      teamSlider.slick('setPosition');
-      teamSlider.animate({'opacity':1});
-    });
+  teamSlider.css('opacity',0);
+  teamSlider.animate({'z-index':1},300,function(){
+    teamSlider.slick('setPosition');
+    teamSlider.animate({'opacity':1});
   });
 
   /******************************************************************************
@@ -156,6 +162,19 @@ $(function() {
 
   $("#entry").click(function() {
     window.location.href = 'https://www.seattleconsulting.co.jp/freshers/contact_input.php';
+  });
+
+    /******************************************************************************
+    member slick
+  *******************************************************************************/
+  $(function(){
+    var getLocation = location.pathname;
+    console.log(getLocation);
+    // var currentLocation = currentLocation.replace(/[^0-9]/g, '');
+    // console.log(currentLocation);
+    // $(".slider").slick(
+      
+    // );
   });
 
   /******************************************************************************
@@ -188,9 +207,6 @@ function resizeAddClass() {
     $('#team-detail').addClass('w-95').removeClass('w-60');
     $('.slider').css('width', '80%');
     $('#birthplace').addClass('row-cols-4').removeClass('row-cols-8');
-    $('.main-visual').attr('width', '170');
-    $('.main-visual').attr('height', '200');
-    document.getElementById("header-size").setAttribute('viewBox', '0 0 1000 400');
   } else {
     $('#pc-header').show();
     $('#sp-header').hide();
