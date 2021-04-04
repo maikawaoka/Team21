@@ -1097,7 +1097,7 @@ dd.count-bl {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1vw;
+  padding: 0 2vw;
   z-index: 100;
   top: 0;
   position: fixed;
@@ -1183,12 +1183,11 @@ dd.count-bl {
   transition: .5s;
 }
 
-
-
-@media(max-width: 414px){
+@media(max-width: 768px){
   .drawer-list {
     text-align: center !important;
     margin: 25vw;
+    padding: 0 !important;
   }
   
   .drawer-list > li {
@@ -1204,6 +1203,10 @@ dd.count-bl {
 
 .drawer-content > ul {
   list-style: none;
+}
+
+.drawer-list > li {
+  cursor: pointer;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -1224,7 +1227,6 @@ dd.count-bl {
   font-size: 1.2vw;
 }
 
-/* これじゃあかん？ */
 .tab:hover > a > p {
   font-size: 1.2vw;
 }
@@ -1235,6 +1237,18 @@ dd.count-bl {
 
 .img-fluid {
   height: 40vh;
+}
+
+#header-size {
+  width: 500px;
+  height: 400px;
+}
+
+@media(max-width: 768px) {
+  #header-size {
+    width: 170px;
+    height: 200px;
+  }
 }
 
 /******************************************************************************

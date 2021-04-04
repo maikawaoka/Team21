@@ -169,6 +169,9 @@ $(function() {
       $('.arrow-up').addClass('active');
     }
   });
+  $('.drawer-list').on('click', function() {
+    $('#drawer-check').prop('checked', false);
+  })
 });
 
 $(window).resize(function(){
@@ -188,9 +191,9 @@ function resizeAddClass() {
     $('#team-detail').addClass('w-95').removeClass('w-60');
     $('.slider').css('width', '80%');
     $('#birthplace').addClass('row-cols-4').removeClass('row-cols-8');
-    $('.main-visual').attr('width', '170');
-    $('.main-visual').attr('height', '200');
-    document.getElementById("header-size").setAttribute('viewBox', '0 0 1000 400');
+    // $('#header-size').attr('width', '170');
+    // $('#header-size').attr('height', '200');
+    // document.getElementById("header-size").setAttribute('viewBox', '0 0 1000 400');
   } else {
     $('#pc-header').show();
     $('#sp-header').hide();
