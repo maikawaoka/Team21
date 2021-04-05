@@ -110,6 +110,8 @@ $(function() {
   console.log(getString);
   var currentLocation = getString.replace(/[^0-9]/g, '');
   console.log(currentLocation);
+  var int = parseInt(currentLocation);
+  console.log(int);
   
   var memberSlider = $(".member.center").slick({
     infinite: true,
@@ -161,19 +163,6 @@ $(function() {
 
   $("#entry").click(function() {
     window.location.href = 'https://www.seattleconsulting.co.jp/freshers/contact_input.php';
-  });
-
-    /******************************************************************************
-    member slick
-  *******************************************************************************/
-  $(function(){
-    var getLocation = location.pathname;
-    console.log(getLocation);
-    // var currentLocation = currentLocation.replace(/[^0-9]/g, '');
-    // console.log(currentLocation);
-    // $(".slider").slick(
-      
-    // );
   });
 
   /******************************************************************************
