@@ -121,14 +121,20 @@ $(function() {
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: parseInt(currentLocation) + 1
+    slidesToScroll: 1,
+    initialSlide: parseInt(currentLocation) - 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      } 
+    }]
   });
 
   memberSlider.css('opacity',0);
   memberSlider.animate({'z-index':1},300,function(){
     memberSlider.slick('setPosition');
-    memberSlider.slick('slickRemove', parseInt(currentLocation));
+    memberSlider.slick('slickRemove', parseInt(currentLocation) - 1);
     memberSlider.animate({'opacity':1});
   });
 
