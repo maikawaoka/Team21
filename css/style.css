@@ -140,6 +140,10 @@ a {
   margin: 0 20vw !important;
 }
 
+.mb-2vw {
+  margin-bottom: 2vw !important;
+}
+
 .mb-3vw {
   margin-bottom: 3vw !important;
 }
@@ -260,6 +264,15 @@ a {
 }
 
 @media(max-width: 768px) {
+  .mr-2vw {
+    margin-right: 2vw !important;
+  }
+
+  .px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .my-3 {
     margin-top: 1vw !important;
     margin-bottom: 1vw !important;
@@ -322,12 +335,25 @@ a {
   color: red !important;
 } */
 
+
+.btn-close {
+  color: red !important;
+}
+
 .font-s {
   font-size: 1.4vw;
 }
 
+#filterModalLabel {
+  color: #158bde !important;
+}
+
 .sort-icon {
   width: 2vw;
+}
+
+.sort {
+  border: solid 2px #158bde !important;
 }
 
 #border {
@@ -523,10 +549,15 @@ a {
 @media screen and (max-width:599px){
   .sort {
     margin: 3vw 0;
+    border: solid 2px #158bde !important;
+  }
+
+  .font-btn {
+    font-size: 4vw;
   }
 
   .sort-icon {
-    width: 5vw;
+    width: 6vw;
   }
 
   .member-detail{
@@ -626,7 +657,6 @@ a {
     font-size: 1.8vw;
     margin-top: 5.5vw;
   }
-
 }
 
 /******************************************************************************
@@ -760,6 +790,10 @@ a {
 
 /* data  */
 @media screen and (max-width: 768px) {
+  #team-list {
+    margin: 7vw 0;
+  }
+
   .grid-contents > img {
     width: 31vw;
     margin-left: 2vw;
@@ -1200,10 +1234,15 @@ dd.count-bl {
     padding-bottom: 3vh;
     color: #158bde !important;
   }
+    
+  .drawer-list > .drawer-item > p {
+    color: #158bde !important;
+    font-size: 3.5vw !important;
+  }
   
   .drawer-list > .drawer-item > a {
     color: #158bde !important;
-    font-size: 4.5vw !important;
+    font-size: 3.5vw !important;
   }
 }
 
@@ -1299,6 +1338,19 @@ div.nav-link > p {
   max-width: 794px;
 }
 
+.modal-content {
+  border: solid 3px #158bde !important;
+  border-radius: 14px !important;
+  font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
+  color: #393939 !important;
+}
+
+@media(min-width: 768px){
+  .modal-content {
+    padding: 1vw;
+  }
+}
+
 .modal {
   border-radius: 1.2vw !important;
 }
@@ -1306,20 +1358,18 @@ div.nav-link > p {
 
 @media(max-width: 768px){
   #birthplace button{
-    margin-left: 0!important;
-    margin-right: 0!important;
     word-break: keep-all;
   }
   
   #bunri button{
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     word-break: keep-all;
   }
 
   #programing button{
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     word-break: keep-all;
   }
 }
