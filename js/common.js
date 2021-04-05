@@ -104,25 +104,25 @@ $(function() {
   /******************************************************************************
     slider
   *******************************************************************************/
-  var getLocation = location.pathname;
+  const getLocation = location.pathname;
   console.log(getLocation);
-  var getString = getLocation.slice(-7);
+  const getString = getLocation.slice(-7);
   console.log(getString);
-  var currentLocation = getString.replace(/[^0-9]/g, '');
+  const currentLocation = getString.replace(/[^0-9]/g, '');
   console.log(currentLocation);
-  
+
   var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    initialSlide: currentLocation + 1
+    initialSlide: parseInt(currentLocation) + 1
   });
 
   memberSlider.css('opacity',0);
   memberSlider.animate({'z-index':1},300,function(){
     memberSlider.slick('setPosition');
-    memberSlider.slick('slickRemove', currentLocation);
+    memberSlider.slick('slickRemove', parseInt(currentLocation));
     memberSlider.animate({'opacity':1});
   });
 
@@ -130,12 +130,14 @@ $(function() {
     infinite: true,
     centerMode: true,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    initialSlide: parseInt(currentLocation) + 1
   });
 
   teamSlider.css('opacity',0);
   teamSlider.animate({'z-index':1},300,function(){
     teamSlider.slick('setPosition');
+    teamSlider.slick('slickRemove', parseInt(currentLocation));
     teamSlider.animate({'opacity':1});
   });
 
