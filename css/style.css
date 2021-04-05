@@ -1234,10 +1234,15 @@ dd.count-bl {
     padding-bottom: 3vh;
     color: #158bde !important;
   }
+    
+  .drawer-list > .drawer-item > p {
+    color: #158bde !important;
+    font-size: 3.5vw !important;
+  }
   
   .drawer-list > .drawer-item > a {
     color: #158bde !important;
-    font-size: 4.5vw !important;
+    font-size: 3.5vw !important;
   }
 }
 
