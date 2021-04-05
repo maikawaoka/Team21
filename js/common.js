@@ -108,7 +108,6 @@ $(function() {
   console.log(getLocation);
   var getString = getLocation.slice(-7);
   console.log(getString);
-  debugger
   var currentLocation = getString.replace(/[^0-9]/g, '');
   console.log(currentLocation);
   
@@ -188,6 +187,9 @@ $(function() {
       $('.arrow-up').addClass('active');
     }
   });
+  $('.drawer-list').on('click', function() {
+    $('#drawer-check').prop('checked', false);
+  })
 });
 
 $(window).resize(function(){
