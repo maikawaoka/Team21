@@ -105,11 +105,8 @@ $(function() {
     slider
   *******************************************************************************/
   const getLocation = location.pathname;
-  console.log(getLocation);
   const getString = getLocation.slice(-7);
-  console.log(getString);
   const currentLocation = getString.replace(/[^0-9]/g, '');
-  console.log(currentLocation);
 
   var memberSlider = $(".member.center").slick({
     infinite: true,
