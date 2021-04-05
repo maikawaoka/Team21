@@ -317,6 +317,11 @@ a {
 /******************************************************************************
   member 
 *******************************************************************************/
+/* h3.tab-font {
+  font-size: 2vw !important;
+  color: red !important;
+} */
+
 .font-s {
   font-size: 1.4vw;
 }
@@ -652,6 +657,7 @@ a {
 }
 
 .team-name {
+  margin-top: 2vw;
   font-size: 2vw;
   color: #158bde;
   font-family: 'ヒラギノ丸ゴ ProN', sans-serif;
