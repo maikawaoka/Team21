@@ -273,6 +273,10 @@ a {
     margin-right: 2vw !important;
   }
 
+  .mb17 {
+    margin-bottom: 17vw !important;
+  }
+
   .px-0 {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -616,7 +620,7 @@ a {
 
 @media screen and (max-width:599px){
   .sort {
-    margin: 3vw 0;
+    margin-top: 3vw;
     border: solid 2px #158bde !important;
   }
 
@@ -876,6 +880,22 @@ dd.count-bl {
     font-size: 0.8rem !important;
   }
 
+  .row>* {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .team-name {
+    font-size: 0.8em;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .tab-font {
+    font-size: 1.5em !important;
+  }
+
   dd .smallChar {
     font-size: 0.7em !important;
   }
@@ -911,7 +931,7 @@ dd.count-bl {
 
   .team.left .explaination {
     width: 22vw;
-    margin-left: 2vw;
+    margin-left: 6vw;
     margin-right: 6vw;
   }
   
@@ -1518,6 +1538,14 @@ dd.count-bl {
   #header-size {
     width: 170px;
     height: 200px;
+  }
+
+  .tab-title {
+    font-size: 0.7em !important;
+  }
+
+  .comment-bunri {
+    font-size: 0.8em !important;
   }
 }
 
