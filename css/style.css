@@ -1207,7 +1207,6 @@ dd.count-bl {
 .member-2 {
   display: flex;
   width: 100%;
-  position: relative;
 }
 
 .member-3 > .txbox {
@@ -1215,18 +1214,14 @@ dd.count-bl {
   text-align: center;
 }
 
-.member-2 > .txbox {
-  width: 50%;
-  text-align: center;
+.member-2 > .txbox:first-child {
   position: absolute;
+  left: 36%;
 }
 
-.member-2 > .txbox.left {
-  left: 17%;
-}
-
-.member-2 > .txbox.right {
-  right: 17%;
+.member-2 > .txbox:last-child {
+  position: absolute;
+  left: 53%;
 }
 
 .txbox > img {
