@@ -107,28 +107,25 @@ $(function() {
   const getLocation = location.pathname;
   const getString = getLocation.slice(-7);
   const currentLocation = getString.replace(/[^0-9]/g, '');
-
-  // var getLocation = location.pathname;
-  console.log(getLocation);
-  // var getString = getLocation.slice(-7);
-  console.log(getString);
-  // var currentLocation = getString.replace(/[^0-9]/g, '');
-  console.log(currentLocation);
-  // var int = parseInt(currentLocation);
-  // console.log(int);
   
   var memberSlider = $(".member.center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: parseInt(currentLocation) + 1
+    slidesToScroll: 1,
+    initialSlide: parseInt(currentLocation) - 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      } 
+    }]
   });
 
   memberSlider.css('opacity',0);
   memberSlider.animate({'z-index':1},300,function(){
     memberSlider.slick('setPosition');
-    memberSlider.slick('slickRemove', parseInt(currentLocation));
+    memberSlider.slick('slickRemove', parseInt(currentLocation) - 1);
     memberSlider.animate({'opacity':1});
   });
 
@@ -137,13 +134,13 @@ $(function() {
     centerMode: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: parseInt(currentLocation) + 1
+    initialSlide: parseInt(currentLocation) - 1
   });
 
   teamSlider.css('opacity',0);
   teamSlider.animate({'z-index':1},300,function(){
     teamSlider.slick('setPosition');
-    teamSlider.slick('slickRemove', parseInt(currentLocation));
+    teamSlider.slick('slickRemove', parseInt(currentLocation) - 1);
     teamSlider.animate({'opacity':1});
   });
 
