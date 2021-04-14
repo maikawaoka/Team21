@@ -292,7 +292,7 @@ a {
   }
 
   .arrow-up-img {
-    width: 5vw !important;
+    width: 4vw !important;
   }
 
   .arrow-up {
@@ -303,8 +303,8 @@ a {
     border: 3px solid #158bde;
     background: #fff;
     border-radius: 34vw;
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
     position: fixed;
     bottom: 16vw;
     opacity: 0;
@@ -538,7 +538,8 @@ a {
 }
 
 .person-name h1{
-  font-size: 1.3vw;
+  font-size: 1.2rem;
+  font-family: 'ヒラギノ丸ゴ ProN', 'M PLUS Rounded 1c';
   font-weight: large;
   text-align: center;
   margin-bottom: 0vw;
@@ -577,16 +578,15 @@ a {
   margin-bottom: 10vw;
 }
 
-.content-title{
+.content-title {
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.content-title {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+.mtmb {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
 }
 
 .content-title img{
@@ -596,7 +596,7 @@ a {
 
 .content-title h2{
   font-family: 'ヒラギノ丸ゴ ProN', 'M PLUS Rounded 1c';
-  font-size: 1.8em;
+  font-size: 1.8rem;
   margin-left: 1vw;
   margin-top: auto;
   margin-bottom: auto;
@@ -645,11 +645,7 @@ a {
   }
   
   .mv-text{
-    font-size: 2.7vw;
-  }
-
-  .person-name h1{
-    font-size: 2.7vw;
+    font-size: 1.2rem;
   }
 
   .name-en{
@@ -661,31 +657,39 @@ a {
     margin-left: 24.5vw;
   }
 
+  .content-title {
+    margin-top: 23vw;
+  }
+
   .content-title img{
     width: 10vw;
   }
   
   .content-title h2 {
     font-family: 'ヒラギノ丸ゴ ProN', 'M PLUS Rounded 1c';
-    font-size: 1.1em;;
+    font-size: 1.2rem;;
     margin-left: 1vw;
   }
 
   .detail-content h3{
-    font-size: 0.9em;
+    font-size: 1.1em;
     margin-top: 4vw;
     margin-bottom: 9vw;
   }
 
   .detail-content p{
-    font-size: 0.9em;
+    font-size: 1rem;
     margin-top: 5.5vw;
   }
 }
 
 @media screen and (min-width:600px) and (max-width:1023px){
   .h5 {
-    font-size: 0.8rem !important;
+    font-size: 0.8rem;
+  }
+
+  .other-member {
+    font-size: 1.4em !important;
   }
 
   .member-detail{
@@ -701,11 +705,7 @@ a {
   }
   
   .mv-text{
-    font-size: 1.9vw;
-  }
-
-  .person-name h1{
-    font-size: 1.9vw;
+    font-size: 1.2rem;
   }
 
   .name-en{
@@ -723,7 +723,7 @@ a {
   
   .content-title h2 {
     font-family: 'ヒラギノ丸ゴ ProN', 'M PLUS Rounded 1c';
-    font-size: 2.1vw;
+    font-size: 1.5rem;
   }
 
   .detail-content h3{
@@ -732,7 +732,7 @@ a {
   }
 
   .detail-content p{
-    font-size: 1.8vw;
+    font-size: 1.1rem;
     margin-top: 5.5vw;
   }
 }
@@ -1000,6 +1000,11 @@ dd.count-bl {
   .team-hover img {
     width: 58vw !important;
   }
+
+  .mtmb {
+    margin-top: 15vw;
+    margin-bottom: 6vw;
+  }
 }
 
 .count {
@@ -1093,9 +1098,17 @@ dd.count-bl {
   .alma-mater td {
     font-size: 1.2em !important;
   }
+
+  .between {
+    margin-bottom: 5vw;
+  }
 }
 
 @media screen and (max-width:600px){
+
+  .other-member {
+    font-size: 1.2em !important;
+  }
 
   .grid{
     margin: 0;
@@ -1224,17 +1237,23 @@ dd.count-bl {
   left: 53%;
 }
 
+#team-detail > .text-center {
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+}
+
 .txbox > img {
   width: 10vw;
 }
 
 .txbox > p {
   margin-top: 0.6vw;
-  font-size: 1.3vw;
+  font-size: 1.3rem;
 }
 
-.img-text-center p {
-  font-size: 1.1em !important;
+.mb17 > p {
+  margin-top: 0.6vw;
+  font-size: 1.3rem;
 }
 
 .answer-box:nth-child(odd) {
@@ -1243,7 +1262,7 @@ dd.count-bl {
 
 .answer-box > .img-text-center > p {
   margin-top: 0.6vw;
-  font-size: 1.1vw;
+  font-size: 1.1rem;
   margin-bottom: 0;
 }
 
@@ -1251,7 +1270,17 @@ dd.count-bl {
   .answer-box > .img-text-center > p {
     margin-top: 1.5vw;
     font-size: 4vw !important;
+    margin-bottom: 5vw;
   }
+
+  .txbox > p {
+    font-size: 1.1rem;
+  }
+
+  .w-inteviewer {
+    width: 50vw;
+  }
+  
 
   .question {
     margin-bottom: 26vw;
@@ -1266,14 +1295,23 @@ dd.count-bl {
   }
 
   .img-text-center p {
-    font-size: 4vw !important;
+    font-size: 1.1rem;
     margin-top: 1.5vw;
+  }
+
+  .between {
+    margin-bottom: 8.5vw;
   }
 }
 
 .row > .col-sm-8 {
-  margin-top: 6vw;
-  font-size: 0.9em;
+  font-size: 1.1rem;
+  align-items: center !important;
+  display: flex;
+}
+
+.relay {
+  display: block !important;
 }
 
 .color-gray{
@@ -1283,6 +1321,10 @@ dd.count-bl {
 .img-text-center{
   display: block;
   text-align: center;
+}
+
+.between {
+  margin-bottom: 2.5vw;
 }
 
 #team-detail h1{
@@ -1301,9 +1343,6 @@ dd.count-bl {
   text-align: center;
 }
 
-.img-text-center p{
-  font-size: 1.5vw;
-}
 /******************************************************************************
   header
 *******************************************************************************/
@@ -1483,6 +1522,10 @@ dd.count-bl {
   .drawer-list > .drawer-item > a {
     color: #158bde !important;
     font-size: 3.5vw !important;
+  }
+  
+  .question h3 {
+    font-size: 1.3rem;
   }
 }
 
