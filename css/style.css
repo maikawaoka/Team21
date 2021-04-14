@@ -67,7 +67,7 @@
 
   .slick-current {
     opacity: 1 !important;
-    transform: scale(.8) !important;
+    transform: scale(1) !important;
   }
 }
 
