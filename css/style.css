@@ -62,12 +62,12 @@
 @media(max-width: 768px) {
   .slick-slide {
     margin: 0px 20px;
-    transform: scale(.2) !important;
+    transform: scale(.6) !important;
   }
 
   .slick-current {
     opacity: 1 !important;
-    transform: scale(.4) !important;
+    transform: scale(1) !important;
   }
 }
 
