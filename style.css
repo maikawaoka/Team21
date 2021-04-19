@@ -56,13 +56,13 @@
 
 .slick-slide {
   margin: 0px 20px;
-  transform: scale(.3);
+  transform: scale(.8);
 }
 
 @media(max-width: 768px) {
   .slick-slide {
     margin: 0px 20px;
-    transform: scale(1) !important;
+    transform: scale(.6) !important;
   }
 
   .slick-current {
@@ -324,22 +324,23 @@ a {
 .footer-height {
   padding-top: 2vh !important;
   padding-bottom: 2vh !important;
+  font-size: 1vw !important;
   line-height: 1vh;
   height: 5vh;
 }
 
 @media(max-width: 768px) {
   .footer-height {
-    padding-top: 2vh !important;
-    padding-bottom: 2vh !important;
-    font-size: 0.6rem;
-    line-height: 0;
+    padding-top: 3vh !important;
+    padding-bottom: 3vh !important;
+    font-size: 1vw !important;
+    line-height: 0 !important;
     height: 0 !important;
   }
 }
 
 .font-xs {
-  font-size: 0.7rem;
+  font-size: 1vw;
 }
 
 /******************************************************************************
@@ -559,7 +560,6 @@ a {
 .list-area dt{
   float: left;
   font-weight: 500;
-  font-size: 1.1rem;
 }
 
 .list-area dt::after{
@@ -568,7 +568,6 @@ a {
 
 .list-area dd{
   margin-left: 13vw;
-  font-size: 1rem;
 }
 
 .person-contents{
@@ -623,10 +622,6 @@ a {
   .sort {
     margin-top: 3vw;
     border: solid 2px #158bde !important;
-  }
-
-  .inner {
-    margin-top: 0vw;
   }
 
   .font-btn {
@@ -911,7 +906,7 @@ dd.count-bl {
   }
 
   .count dd {
-    margin-bottom: 0.7rem !important;
+    margin-bottom: 1.9vw !important;
   }
 
   .comment {
@@ -1010,11 +1005,6 @@ dd.count-bl {
     margin-top: 15vw;
     margin-bottom: 6vw;
   }
-
-  .col6-width {
-    padding-left: 9vw !important;
-    padding-right: 9vw !important;
-  }
 }
 
 .count {
@@ -1035,7 +1025,7 @@ dd.count-bl {
 .count dd{
   margin-left: 2.5vw;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.1vw;
   float: left;
 }
 
@@ -1076,8 +1066,7 @@ dd.count-bl {
 }
 
 .grid-sub-title{
-  font-size: 0.8rem;
-  padding-left: 1vw;
+  font-size: 1vw;
 }
 
 .alma-mater td{
@@ -1527,12 +1516,12 @@ dd.count-bl {
     
   .drawer-list > .drawer-item > p {
     color: #158bde !important;
-    font-size: 1.1rem;
+    font-size: 3.5vw !important;
   }
   
   .drawer-list > .drawer-item > a {
     color: #158bde !important;
-    font-size: 1.1rem;
+    font-size: 3.5vw !important;
   }
   
   .question h3 {
@@ -1580,25 +1569,14 @@ dd.count-bl {
 
 #header-size {
   width: 500px;
-  height: 420px;
-  margin-top: 1.5vw;
+  height: 400px;
 }
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
   #header-size {
     width: 170px;
-    height: 130px;
-    margin-top: -1.2vw;
+    height: 200px;
   }
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  #header-size {
-    width: 170px;
-    height: 130px;
-    margin-top: -0.5vw;
-  }
-}
 
   .tab-title {
     font-size: 0.7em !important;
