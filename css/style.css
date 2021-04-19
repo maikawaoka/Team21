@@ -56,13 +56,13 @@
 
 .slick-slide {
   margin: 0px 20px;
-  transform: scale(.8);
+  transform: scale(.3);
 }
 
 @media(max-width: 768px) {
   .slick-slide {
     margin: 0px 20px;
-    transform: scale(.6) !important;
+    transform: scale(1) !important;
   }
 
   .slick-current {
@@ -324,23 +324,22 @@ a {
 .footer-height {
   padding-top: 2vh !important;
   padding-bottom: 2vh !important;
-  font-size: 1vw !important;
   line-height: 1vh;
   height: 5vh;
 }
 
 @media(max-width: 768px) {
   .footer-height {
-    padding-top: 3vh !important;
-    padding-bottom: 3vh !important;
-    font-size: 1vw !important;
-    line-height: 0 !important;
+    padding-top: 2vh !important;
+    padding-bottom: 2vh !important;
+    font-size: 0.6rem;
+    line-height: 0;
     height: 0 !important;
   }
 }
 
 .font-xs {
-  font-size: 1vw;
+  font-size: 0.7rem;
 }
 
 /******************************************************************************
@@ -906,7 +905,7 @@ dd.count-bl {
   }
 
   .count dd {
-    margin-bottom: 1.9vw !important;
+    margin-bottom: 0.7rem !important;
   }
 
   .comment {
@@ -1005,6 +1004,11 @@ dd.count-bl {
     margin-top: 15vw;
     margin-bottom: 6vw;
   }
+
+  .col6-width {
+    padding-left: 9vw !important;
+    padding-right: 9vw !important;
+  }
 }
 
 .count {
@@ -1025,7 +1029,7 @@ dd.count-bl {
 .count dd{
   margin-left: 2.5vw;
   margin-bottom: 0;
-  font-size: 1.1vw;
+  font-size: 1rem;
   float: left;
 }
 
@@ -1066,7 +1070,8 @@ dd.count-bl {
 }
 
 .grid-sub-title{
-  font-size: 1vw;
+  font-size: 0.8rem;
+  padding-left: 1vw;
 }
 
 .alma-mater td{
@@ -1516,12 +1521,12 @@ dd.count-bl {
     
   .drawer-list > .drawer-item > p {
     color: #158bde !important;
-    font-size: 3.5vw !important;
+    font-size: 1.1rem;
   }
   
   .drawer-list > .drawer-item > a {
     color: #158bde !important;
-    font-size: 3.5vw !important;
+    font-size: 1.1rem;
   }
   
   .question h3 {
@@ -1576,6 +1581,7 @@ dd.count-bl {
   #header-size {
     width: 170px;
     height: 200px;
+    margin-top: 7vw;
   }
 
   .tab-title {
