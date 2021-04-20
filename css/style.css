@@ -54,6 +54,10 @@
   align-items: center;
 }
 
+.team.slider {
+  width: 40%;
+}
+
 .slick-slide {
   margin: 0px 20px;
   transform: scale(.3);
@@ -1218,28 +1222,14 @@ dd.count-bl {
   flex-direction: column-reverse;
 }
 
-.member-3 {
-  display: flex;
-  width: 100%;
-}
-.member-2 {
+.team-member {
   display: flex;
   width: 100%;
 }
 
-.member-3 > .txbox {
-  width: 33%;
+.team-member > .txbox {
+  width: 20%;
   text-align: center;
-}
-
-.member-2 > .txbox:first-child {
-  position: absolute;
-  left: 36%;
-}
-
-.member-2 > .txbox:last-child {
-  position: absolute;
-  left: 53%;
 }
 
 #team-detail > .text-center {
