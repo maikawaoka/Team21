@@ -60,18 +60,18 @@
 
 .slick-slide {
   margin: 0px 20px;
-  transform: scale(.3);
+  transform: scale(.7);
 }
 
 @media(max-width: 768px) {
   .slick-slide {
     margin: 0px 20px;
-    transform: scale(1) !important;
+    transform: scale(.5) !important;
   }
 
   .slick-current {
     opacity: 1 !important;
-    transform: scale(1) !important;
+    transform: scale(.5) !important;
   }
 }
 
@@ -473,7 +473,7 @@ a {
 .team-hover {
   position: relative;
   width: 100%;
-  height: 110%;
+  height: 100%;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -935,7 +935,12 @@ dd.count-bl {
   }
 
   .team-hover img:first-child {
-    opacity: 0 !important;;
+    opacity: 0 !important;
+  }
+
+  .team-hover:hover img:first-child {
+    opacity: 1 !important;
+    transition: 0.5s ease-in-out;
   }
 
   .team.left .explaination {
