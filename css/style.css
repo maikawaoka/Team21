@@ -89,13 +89,17 @@
   opacity: .2;
 }
 
-.slick-active {
+.slick-current {
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.member .slick-active {
   opacity: .5;
 }
 
-.slick-current {
+.team .slick-active {
   opacity: 1;
-  transform: scale(1);
 }
 
 /******************************************************************************
@@ -752,12 +756,8 @@ a {
 .team {
   display: flex;
   position: relative;
-  height: 24vw;
+  height: 26vw;
 }
-
-/* .team-image {
-  width: 36vw; */
-/* } */
 
 .team.left .explaination {
   width: 30vw;
